@@ -1,0 +1,30 @@
+header.header
+    a(href="tel:+7(812)998-88-91").headerPhoneIco
+        +svgIcon('icon-telbutton')
+    a(href="/")
+        +svgIcon('logo')
+    .headerMenu.headerMenuContacts#gamburger
+        +svgIcon('icon-burger')
+        .headerMenuWrap#gamDropdown
+            //-a(href="/").headerMenuItems.headerMenuItemActive Главная
+            //-a(href="#").headerMenuItems О нас
+            //-a(href="/netMarkets.html").headerMenuItems Сеть магазинов
+            //-a(href="/assortment.html").headerMenuItems Ассортимент
+            //-a(href="/contacts.html").headerMenuItems Контакты
+            a(href="http://glavpivo.saydanke.ru/html/public/aboutUs.html").headerMenuItems О нас
+            a(href="http://glavpivo.saydanke.ru/html/public/netMarkets.html").headerMenuItems Сеть магазинов
+            a(href="http://glavpivo.saydanke.ru/html/public/assortment.html").headerMenuItems Ассортимент
+            a(href="http://glavpivo.saydanke.ru/html/public/contacts.html").headerMenuItems Контакты
+
+    .headerMenuNear
+        .headerMenuNearWrap
+            p Мы рядом
+            p.headerMenuNearTextRight 6 км.
+        .headerMenuNearWrap
+            p.headerMenuNearTextWhite Коменданский пр. 25 к.1
+            .typeOfMarket Магазин-пивная
+            p.headerMenuNearTextRight Открыто до 22:00
+        .headerMenuNearHowToFind
+            .headerMenuNearHowToFindIcon
+                +svgIcon('searchlocation')
+            p.headerMenuNearHowToFindText Как найти?

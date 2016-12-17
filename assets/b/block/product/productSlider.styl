@@ -1,0 +1,34 @@
+.productSliderWrap
+    width 940px
+    margin 0 auto
+    padding-top 90px
+    margin-bottom -25px
+    +below(940px)
+        width auto
+        margin-left 78px
+    +below(750px)
+        width auto
+        margin-left 40px
+
+.productBeerSlider
+    width 132%
+    height 315px
+    box horizontal middle
+    position relative
+    right 24px
+    padding-left 20px
+    +below(940px)
+        width 100%
+    +below(768px)
+        padding-left 10px
+
+.productSliderItems
+    width calc(100% - 83px)
+    margin 0
+.productBeersliderItem
+    height 315px
+    padding 0 20px
+    box vertical middle center
+
+.productSliderItems.swiper-container-autoheight .swiper-wrapper
+    align-items flex-end

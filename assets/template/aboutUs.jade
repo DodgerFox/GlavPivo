@@ -1,0 +1,210 @@
+extends _layout
+
+block content
+    section.aboutUs 
+        .pageWrap
+            h1.aboutUsMainTitle О нас
+            h2.aboutUsSimpleTitle Главпиво
+            p.aboutUsMainText  Сеть магазинов «ГлавПиво» на сегодняшний день является одной из самых быстроразвивающихся торговых сетей в Петербурге.
+            .aboutUsLinkItems
+                a(data-scroll, href='#aboutUsWhyWe').aboutUsLinkItem
+                    .aboutUsLinkItemLine
+                    h4.aboutUsLinkItemText Почему </br>именно мы?
+                a(data-scroll, href='#aboutUsHistory').aboutUsLinkItem
+                    .aboutUsLinkItemLine
+                    h4.aboutUsLinkItemText История компании
+                a(data-scroll, href='#aboutUsGlavpivoToday').aboutUsLinkItem
+                    .aboutUsLinkItemLine
+                    h4.aboutUsLinkItemText Компания сегодня
+                a(data-scroll, href='#aboutUsTeam').aboutUsLinkItem
+                    .aboutUsLinkItemLine
+                    h4.aboutUsLinkItemText Команда
+                a(data-scroll, href='#aboutUsMap').aboutUsLinkItem
+                    .aboutUsLinkItemLine
+                    h4.aboutUsLinkItemText Развитие </br>сети на карте
+    section.aboutUsWhyWe#aboutUsWhyWe
+        .aboutUsPageWrap
+            h2.aboutUsSimpleTitle Почему<br/> именно мы?
+            .aboutUsWhyWeItems
+                .aboutUsWhyWeItem
+                    +svgIcon('beer-icon')
+                    .aboutUsWhyWeItemText Настоящее свежее пиво и непиво
+                .aboutUsWhyWeItem
+                    +svgIcon('fish-icon')
+                    .aboutUsWhyWeItemText 86 позиций оригинальных закусок
+                .aboutUsWhyWeItem
+                    +svgIcon('brewman-icon')
+                    .aboutUsWhyWeItemText Лучшие отечественные пивовары
+                .aboutUsWhyWeItem
+                    +svgIcon('spb-icon')
+                    .aboutUsWhyWeItemText Во всех районах Санкт-Петербурга и ближайших пригородов
+                .aboutUsWhyWeItem
+                    +svgIcon('crab-icon')
+                    .aboutUsWhyWeItemText  Живая рыба и раки прямо в пивной
+                .aboutUsWhyWeItem
+                    +svgIcon('gift-icon')
+                    .aboutUsWhyWeItemText  Программы лояльности для клиентов
+                .aboutUsWhyWeItem
+                    +svgIcon('rouble-icon')
+                    .aboutUsWhyWeItemText  Доступные каждому цены
+    section.aboutUsHistory#aboutUsHistory
+        .aboutUsPageWrap
+            h2.aboutUsSimpleTitle История компании
+            h1.aboutUsHistoryBigTitleYear 2010
+            .aboutUsHistoryEventsWrap
+                .aboutUsHistoryEventsOldPhoto(style="background-image: url(img/oldPhoto.jpg)")
+                .aboutUsHistoryEvents
+                    .aboutUsHistoryEvent
+                        .aboutUsHistoryEventDateWrap
+                            .aboutUsHistoryEventDate 2 января
+                            .aboutHistoryEventDateLine
+                        .aboutUsHistoryEventDescription На новогодних праздниках «ГлавПиво» открывает первую торговую точку в Кировском районе Санкт-Петербурга.
+                    .aboutUsHistoryEvent
+                        .aboutUsHistoryEventDateWrap
+                            .aboutUsHistoryEventDate 12 января
+                            .aboutHistoryEventDateLine
+                        .aboutUsHistoryEventDescription Удачливому покупателю был выдан первый бонусный литр по карте постоянного клиента.
+                    .aboutUsHistoryEvent
+                        .aboutUsHistoryEventDateWrap
+                            .aboutUsHistoryEventDate 16 марта
+                            .aboutHistoryEventDateLine
+                        .aboutUsHistoryEventDescription В первой точке сети появляются развесные снеки (анчоус, минтай, янтарная рыба, осьминог, горбуша) и другие закуски.
+                    .aboutUsHistoryEvent
+                        .aboutUsHistoryEventDateWrap
+                            .aboutUsHistoryEventDate 5 сентября
+                            .aboutHistoryEventDateLine
+                        .aboutUsHistoryEventDescription ГлавПиво открывает второй магазин разливного пива на Торфяной дороге 2
+                
+        .aboutUsHistoryLineWrap
+            .aboutUsHistoryLine
+                .aboutUsHistoryLineTrue
+            .aboutUsPageWrap
+                .aboutUsHistoryLineYears
+                    .aboutUsHistoryLineYear.aboutUsHistoryLineYearActive 2010
+                    .aboutUsHistoryLineYear 2011
+                    .aboutUsHistoryLineYear 2012
+                    .aboutUsHistoryLineYear 2013
+                    .aboutUsHistoryLineYear 2014
+                    .aboutUsHistoryLineYear 2015
+                    .aboutUsHistoryLineYear 2016
+                    .aboutUsHistoryLineYear 2017
+
+    section.aboutUsGlavpivoToday#aboutUsGlavpivoToday
+        .aboutUsPageWrap
+            h2.aboutUsSimpleTitle.textAlignLeft Главпиво сегодня
+            p.aboutUsGlavpivoTodayDesc Данные о росте приведены по отношению к данным на 31 декабря 2015 года.
+            .aboutUsGlavpivoTodayItems
+                .aboutUsGlavpivoTodayItem
+                    .aboutUsGlavpivoTodayItemWrapTop
+                        h2.aboutUsGlavpivoTodayItemNumber 9
+                        .aboutUsGlavpivoTodayItemLine
+                    .aboutUsGlavpivoTodayItemWrapBottom
+                        .aboutUsGlavpivoTodayItemText лет успешной работы
+                        .aboutUsGlavpivoTodayItemPercent
+                                +svgIcon('greenArrow')
+                                p.aboutUsGlavpivoTodayItemPercentValue +12,5%
+                .aboutUsGlavpivoTodayItem
+                    .aboutUsGlavpivoTodayItemWrapTop
+                        h2.aboutUsGlavpivoTodayItemNumber 12
+                        .aboutUsGlavpivoTodayItemLine
+                    .aboutUsGlavpivoTodayItemWrapBottom
+                        .aboutUsGlavpivoTodayItemText пивоварен, представленных в магазинах и пивных.
+                        .aboutUsGlavpivoTodayItemPercent
+                                +svgIcon('greenArrow')
+                                p.aboutUsGlavpivoTodayItemPercentValue +12,5%
+                .aboutUsGlavpivoTodayItem
+                    .aboutUsGlavpivoTodayItemWrapTop
+                        h2.aboutUsGlavpivoTodayItemNumber 49
+                        .aboutUsGlavpivoTodayItemLine
+                    .aboutUsGlavpivoTodayItemWrapBottom
+                        .aboutUsGlavpivoTodayItemText торговых точек, включая магазины-пивные.
+                        .aboutUsGlavpivoTodayItemPercent
+                                +svgIcon('greenArrow')
+                                p.aboutUsGlavpivoTodayItemPercentValue +12,5%
+                .aboutUsGlavpivoTodayItem
+                    .aboutUsGlavpivoTodayItemWrapTop
+                        h2.aboutUsGlavpivoTodayItemNumber 50
+                        .aboutUsGlavpivoTodayItemLine
+                    .aboutUsGlavpivoTodayItemWrapBottom
+                        .aboutUsGlavpivoTodayItemText различных сортов пива и напитков
+                        .aboutUsGlavpivoTodayItemPercent
+                                +svgIcon('greenArrow')
+                                p.aboutUsGlavpivoTodayItemPercentValue +12,5%
+
+    section.aboutUsTeam#aboutUsTeam
+        .aboutUsPageWrap
+            h2.aboutUsSimpleTitle.textAlignLeft Команда
+            .aboutUsTeamWorkers
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг» подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг» подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг»
+                .aboutUsTeamWorker
+                    .aboutUsTeamWorkerImage(style='background-image:url("img/avatarMaxim.jpg");')
+                    .aboutUsTeamWorkerFirstName Максим
+                    .aboutUsTeamWorkerLastName  Кирай
+                    .aboutUsTeamWorkerStatus Руководитель подразделения «ГлавПиво Юг»
+
+    section.aboutUsMap#aboutUsMap
+        .aboutUsPageWrap.aboutUsMapTitile
+            h2.aboutUsSimpleTitle.textAlignLeft Развитие </br> сети магазинов 
+        #map-aboutUs
+        .aboutUsMapHistoryLine
+            .aboutUsMapHistoryLineWrap
+                .aboutUsPageWrap
+                    .aboutUsMapHistoryLineYears
+                        .aboutUsMapHistoryLineYear.aboutUsMapHistoryLineYearActive 2010
+                        .aboutUsMapHistoryLineYear 2011
+                        .aboutUsMapHistoryLineYear 2012
+                        .aboutUsMapHistoryLineYear 2013
+                        .aboutUsMapHistoryLineYear 2014
+                        .aboutUsMapHistoryLineYear 2015
+                        .aboutUsMapHistoryLineYear 2016
+                        .aboutUsMapHistoryLineYear 2017
+                .aboutUsMapHistoryLineBack
+                    .aboutUsMapHistoryLineTrue
+                .aboutUsPageWrap
+                    .aboutUsMapHistoryLineTextItems
+                        .aboutUsMapHistoryLineTextItem 4 магазина
+                        .aboutUsMapHistoryLineTextItem 8 магазина
+                        .aboutUsMapHistoryLineTextItem 11 магазина
+                        .aboutUsMapHistoryLineTextItem 18 магазина
+                        .aboutUsMapHistoryLineTextItem 24 магазина </br> 2 пивные
+                        .aboutUsMapHistoryLineTextItem 34 магазина </br> 4 пивные
+                        .aboutUsMapHistoryLineTextItem 34 магазина </br> 4 пивные
+                        .aboutUsMapHistoryLineTextItem 43 магазина </br> 6 пивные
+
+    script(src="js/mapAboutUs.js")
+    script(src="js/smooth-scroll.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&callback=initMap")

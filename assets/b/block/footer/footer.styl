@@ -1,0 +1,163 @@
+.footer.footer
+    position relative
+.footerBottom
+    height 85px
+    background #121212
+    padding 0 170px 0 80px
+    box middle flex-start horizontal
+    position relative
+    +below(1020px)
+        padding 0 105px 0 80px
+    +below(750px)
+        background-image url('../img/bottomtexture.png')
+        padding 0 40px
+    +below(580px)
+        box none
+        height 100px
+        display block!important
+
+.footerBottomLeft
+    box middle flex-start horizontal
+    +below(580px)
+        box none
+        float left
+        padding-top 25px
+        display block!important
+    +below(321px)
+        width 100%
+        text-align center
+
+.footerCopyright
+        font-size 9px
+        color #4a4a4a
+        font-family 'Muller-Regular'
+        width 160px
+        letter-spacing -.2px
+        line-height 12px
+        +below(321px)
+            float none
+            width 160px
+            text-align center
+            margin 0 auto
+
+.footerWarning
+    margin-left 47px
+    +below(1020px)
+        display none
+    p
+        width 247px
+        font-size 10px
+        color #4a4a4a
+        font-family 'Muller-Regular'
+        margin-left 10px
+        float left
+        letter-spacing -.2px
+        line-height 14px
+        padding-top 5px
+
+.warningIcon
+    size 38px
+    border-radius 50%
+    background-image url('../img/18.png')
+    margin-right 10px
+    float left
+
+.footerSocialIcons
+    width 145px
+    margin-left 47px
+    box middle horizontal space-between
+    +below(580px)
+        justify-content center!important
+        top -40px
+        margin-left -40px
+        width 100%
+        position absolute
+    a
+        size 38px
+        box vertical middle center
+        background-color #383838
+        border-radius 50%
+        +below(580px)
+            margin 0 8px!important
+        svg
+            flex 0 1 auto
+            size 14px
+            fill #b7b7b7
+            transition all .3s
+        &:hover
+            svg
+                fill #FFF
+                size 18px
+
+.footerSocialDevelop
+    font-size 10px
+    color #4a4a4a
+    font-family 'Muller-Regular'
+    position absolute
+    right 80px
+    +below(750px)
+        right 40px
+    +below(580px)
+    	top 25px
+    +below(321px)
+    	left 0
+    	float left
+    +below(321px)
+        position relative
+        width 100%
+        left 0
+        text-align center
+        top 10px
+    a
+        color #ffd427
+        border-bottom 1px solid #ffd427
+        text-decoration none
+        padding-bottom 2px
+        &:hover
+            border-bottom none
+
+.footerTop
+    box middle horizontal space-between
+    padding 0px 85px
+    background-image url('../img/bottomtexture.png')
+    height 142px
+    +retina
+        background-image url('../img/bottomtexture-2x.png')
+    +below(995px)
+        justify-content center!important
+    +below(560px)
+        padding 0px 40px
+
+.footerMenu
+    width 76%
+    margin-right 9%
+    box middle horizontal space-between
+    +below(1060px)
+        width 76%
+        margin-right 7%
+    +below(995px)
+        display none
+
+.footerMenuItem
+    a
+        color #6e6e6e
+        font-size 12px
+        font-family "Muller-Black"
+        text-transform uppercase
+        text-decoration none
+        letter-spacing 0.8
+        position relative
+        transition 0.3s all ease-in-out
+        &:hover
+            color #fff
+
+.footerMenuItemActive
+    a
+        color #fff
+        &:before
+            content ''
+            position absolute
+            height 5px
+            width 20px
+            top -23px
+            background #ffd427

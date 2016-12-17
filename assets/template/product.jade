@@ -1,0 +1,170 @@
+extends _layout
+
+block content
+    section.product
+        .pageWrap.productNoMargin
+            .productHeaderWrap
+                .productName
+                    p.productMainDescription.descriptionMobile Волковская пивоварня
+                    h1.productMainHeader Weizenfeld Kirschbier
+                    p.productMainDescription.descriptionDesctop Волковская пивоварня
+                .productButtonBack
+                    .productButtonBackIcon
+                        +svgIcon('icon-arrow-left')
+                    .productButtonBackText Назад к списку
+            .productBody
+                .productNew Новинка
+                .productImage
+                    //-img(src="img/beerBigImage.jpg")
+                    img(src="img/bigImageBeer.png")
+                //-(style="background-image:url('img/beerBigImage.jpg');")
+                .productCharacteristicsWrap
+                    .productTextDescription Это светлое лагерное пиво с добавлением натурального сока вишни на стадии брожения. Его насыщенный вишнёвый вкус и аромат превосходно сочетаются с солодовым характером пива. Пиво мягкое, в меру сладкое, хмелевая горечь едва заметна.
+                    .productCharacteristics
+                        h3.productCharacteristicsHeader Начальная плотность
+                        .productCharacteristicsLineWrap.firstLine
+                            .productCharacteristicsMinValue 2%
+                            .productCharacteristicsLine
+                            .productCharacteristicsTrueLine(style='width: 50%;')
+                            .productCharacteristicsMaxValue 15,6%
+                            .productCharacteristicsTrueValue(style='margin-left: 35%;') 12,5%
+                    .productCharacteristics
+                        h3.productCharacteristicsHeader Содержание акоголя
+                        .productCharacteristicsLineWrap.secondLine
+                            .productCharacteristicsMinValue 2%
+                            .productCharacteristicsLine
+                            .productCharacteristicsTrueLine(style='width: 65%;')
+                            .productCharacteristicsMaxValue 6,8%
+                            .productCharacteristicsTrueValue(style='margin-left: 45%;') 4,5% об.
+                    .productCharacteristics
+                        h3.productCharacteristicsHeader Горечь в пиве
+                        .productCharacteristicsLineWrap.thirdLine
+                            .productCharacteristicsMinValue 10</br> IBU
+                            .productCharacteristicsLine
+                            .productCharacteristicsTrueLine(style='width: 3%;')
+                            .productCharacteristicsMaxValue 80</br> IBU
+                            .productCharacteristicsTrueValue(style='margin-left: 0%;') 10 IBU
+                    .productStockWrap.productStockDesktop
+                        .productStock 
+                            | В наличии в 
+                            span 23 магазинах<br>
+                            | прямо сейчас.
+    section.productWhereBuy
+        .pageWrap.productNoMargin
+            .productWhereBuyWrap
+                .productWhereBuyHeader Где купить?
+                .productStockWrap.productStockDesktop
+                    .productStock 
+                        | В наличии в 
+                        span 23 магазинах<br>
+                        | прямо сейчас.
+                .productToggle
+                    .productToggleSwich
+                    p.productToggleList.productToggleP Списком
+                    p.productToggleMap.productToggleActive На карте
+    section.productMap
+        #map-product
+    section.productList
+    section.productAlso
+        .pageWrap.productNoMargin
+            h2.productWhereBuyHeader Посмотрите также
+            .productSliderWrap
+            .productBeerSlider
+                .productSliderItems.beer-swiper-container
+                    .swiper-wrapper
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider1.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider2.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider3.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider4.png")
+                            .assortmentCardTagNew.assortmentCardTagNewSlider Новинка
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider5.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider6.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider7.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider8.png")
+                        .swiper-slide.productSliderItem
+                            img(src="img/beerslider/beerslider9.png")
+    section.productAlsoCards
+        .pageWrap.productNoMargin
+            .assortimentHeaderWrap
+            .assortmentItem
+                .assortimentItemCategory
+                    h2.assortmentCategoryHeader Посмотрите также
+                .assortmentBeerItems
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/brand-image.jpg');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    a(href='/product.html').assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardTagNew Новинка
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/beerpicture.png');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/brand-image2.jpg');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+    script(src="js/netMarketsToggle.js")
+    script(src="js/map-product.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&callback=initMap")

@@ -1,0 +1,344 @@
+extends _layout
+
+block content
+    .singleMarketFeedback
+        .singleMarketFeedbackWrap
+            .singleMarketFeedbackWindow
+                .singleMarketFeedbacButtonClose
+                    +svgIcon('icon-close')
+                h1.singleMarketFeedbackTitle Оставить отзыв
+                form.singleMarketFeedbackForm
+                    .singleMarketFeedbackFormInputWrap
+                        input.singleMarketFeedbackInput#InputName(type='text', required)
+                        label(for='InputName') Имя
+                    .singleMarketFeedbackFormInputWrap
+                        input.singleMarketFeedbackInput#InputTel(type='text', required)
+                        label(for='InputTel') Телефон или почта
+                    .singleMarketFeedbackFormInputWrap.inputWrap100Per
+                        textarea.singleMarketFeedbackBigInput#InputQuestion(rows='1',required)
+                        label(for='InputQuestion') Напишите отзыв или задайте вопрос
+                    .singleMarketFeedbackFormInputWrap.inputWrap100Per
+                        input.singleMarketFeedbackButton(type='submit', value='Отправить отзыв')
+    section.singleMarket
+        .pageWrap.marginTop120
+            p.singleMarkerHeaderDescMobile.mobileHidden Магазин - пивная
+            h1.singleMarketHeader Наличная ул.33
+            .singleMarkerHeaderDescWrap
+                p.singleMarkerHeaderDesc Магазин - пивная
+                .singleMarketsHeaderSchedule
+                    .singleMarkerHeaderDescDate
+                        h5.singleMarkerHeaderDescTitle 4 октября 2014 года
+                        p.singleMarkerHeaderDescText Дата открытия
+                    .singleMarkerHeaderDescTime
+                        +svgIcon('icon-clock')
+                        h5.singleMarkerHeaderDescTitle 11:00 — 22:00
+                        p.singleMarkerHeaderDescText Понедельник – суббота
+        .awdwdawserger
+            .singleMarketPhotoSlider
+                .singleMarketSlider
+                    .singleMarketSliderSwiper
+                        .singleMarketSliderPreviousButton
+                            +svgIcon('icon-arrow-left')
+                        .singleMarketSliderNextButton
+                            +svgIcon('icon-arrow-right')
+                        .swiper-wrapper
+                            .swiper-slide.singlemarketslideritem
+                                img(src="img/singleMarketSlider/image1.jpg")
+                            .swiper-slide.singlemarketslideritem
+                                img(src="img/singleMarketSlider/image1.jpg")
+                            .swiper-slide.singlemarketslideritem
+                                img(src="img/singleMarketSlider/image1.jpg")
+                            .swiper-slide.singlemarketslideritem
+                                img(src="img/singleMarketSlider/image1.jpg")
+                            .swiper-slide.singlemarketslideritem
+                                img(src="img/singleMarketSlider/image1.jpg")
+                        .swiper-pagination
+        .pageWrap.pageWrapSingleSchedule
+            .singleMarketsHeaderScheduleMobile
+                    .singleMarkerHeaderDescTime
+                        +svgIcon('icon-clock')
+                        h5.singleMarkerHeaderDescTitle 11:00 — 22:00
+                        p.singleMarkerHeaderDescText Понедельник – суббота
+                    .singleMarkerHeaderDescDate
+                        h5.singleMarkerHeaderDescTitle 4 октября 2014 года
+                        p.singleMarkerHeaderDescText Дата открытия
+        .pageWrap.pageWrapSingle
+            .assortimentHeaderWrap
+                h2.assortmentCategoryHeader Ассортимент магазина
+                select.seda
+                    option First
+            .assortmentItem.singleMarketItem
+                .assortimentItemCategory
+                    h2.assortmentCategoryHeader.singleMarketCategoryHeader Разливное пиво
+                    p.assortmentCategoryDescrip У нас большой выбор бутылочного пива, произведенного в удаленных концах России.
+                .assortmentBeerItems
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/brand-image.jpg');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    a(href='/productOfAssortment.html').assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardTagNew Новинка
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/beerpicture.png');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/brand-image2.jpg');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/beerpicture.png');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/beerpicture.png');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/beerpicture.png');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+            .assortmentItem
+                .assortimentItemCategory
+                    h2.assortmentCategoryHeader.singleMarketCategoryHeader Бутылочное пиво
+                    p.assortmentCategoryDescrip Мы подготовили для Вас лучшее бутылочное пиво, произвденнное в Российской Федерации. Исключительный вкус и широкий выбор крафтового пива.
+        .assortmentBeerSliderWrap
+            .assortmentBeerSlider
+                .assortmentSliderItems.beer-swiper-container
+                    .swiper-wrapper
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider1.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider2.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider3.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider4.png")
+                            .assortmentCardTagNew.assortmentCardTagNewSlider Новинка
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider5.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider6.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider7.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider8.png")
+                        .swiper-slide.beersliderItem
+                            img(src="img/beerslider/beerslider9.png")
+
+        .pageWrap.pageWrapAssortment
+            .assortmentItem
+                .assortimentItemCategory
+                    h2.assortmentCategoryHeader.singleMarketCategoryHeader Не пиво
+                    p.assortmentCategoryDescrip Мы подготовили для Вас лучшее бутылочное пиво, произвденнное в Российской Федерации. Исключительный вкус и широкий выбор крафтового пива.
+                .assortmentBeerItems
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/brand-image.jpg');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/beerpicture.png');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+                    .assortmentContainer
+                        .assortmentCard
+                            .assortmentCardItem.assortmentCardFront
+                                .assortmentCardIcon
+                                    +svgIcon('icon-like')
+                                .assortmentCardImage(style="background-image: url('img/brand-image2.jpg');")
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                h2 Dome Kriek     
+                            .assortmentCardItem.assortmentCardBack
+                                h2 Жигулевское традиционное
+                                p.assortmentCardDescHeader Трехсосненский завод
+                                .assortmentCardDescriptionItems
+                                    .assortmentCardDescriptionItem 3.6% об.
+                                    .assortmentCardDescriptionItem IBU 5
+                                p.assortmentCardDescriptionTxt Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.
+                                .assortmentCardInWrap
+                                    p.assortmentCardLinkText Доступно в 
+                                        span 15 точках
+                                    .assortmentCardLinkCircle
+                                        +svgIcon('icon-arrow-right')
+        .pageWrap.pageWrapSingle.marginTop10
+            h2.assortmentCategoryHeader Сотрудники магазина
+            .singleMarketWorkers
+                .singleMarketWorker
+                    .singleMarketWorkerImage(style="background-image: url('../img/workers/1.jpg');")
+                    .singleMarketWorkerInfo
+                        h4.singleMarketWorkerName Светлана Сысоева
+                        p.singleMarketWorkerStatus Управляющая магазином
+                .singleMarketWorker
+                    .singleMarketWorkerImage(style="background-image: url('../img/workers/2.jpg');")
+                    .singleMarketWorkerInfo
+                        h4.singleMarketWorkerName Дмитрий Павлов
+                        p.singleMarketWorkerStatus Продавец
+                .singleMarketWorker
+                    .singleMarketWorkerImage(style="background-image: url('../img/workers/3.jpg');")
+                    .singleMarketWorkerInfo
+                        h4.singleMarketWorkerName Алексей Рудман
+                        p.singleMarketWorkerStatus Продавец
+        .singleMarketsMap
+            .pageWrap.pageWrapSingle
+                h2.assortmentCategoryHeader Как добраться?
+            .singleMarketsContacts
+                .contactItems
+                    h1.contactsHeaderMain Контакты
+                    .contactItem.contactItemAdress
+                        p 198188, Россия,</br>  Санкт-Петербург,</br> ул. Наличная, 33
+                    .contactItem
+                        h2.contactsHeader Телефон магазина
+                        p +7 (931) 213-31-71
+                    .contactItem
+                        h2.contactsHeader E-mail
+                        p
+                            a(href="#") nalichnaya33@glav-beer.ru
+                    .contactFeedbackButton Оставить отзыв
+            #map-singleMarkets
+    script(src="js/mapSingleMarket.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&callback=initMap")

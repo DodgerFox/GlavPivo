@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главпиво</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link href="./css/woff.css" type="text/css" rel="stylesheet">
+    <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+    <link href="./css/blocks.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600" rel="stylesheet"><!--[if IE 8]><link rel="stylesheet" href="./css/blocks.ie.css"><![endif]-->
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script><![endif]-->
+    <script>
+      ;( function( window, document )
+          {
+              'use strict';
+      
+              var file     = './img/svghtml.html',
+                  revision = 1,
+                  debug = true;
+      
+              if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
+                  return true;
+      
+              var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
+                  request,
+                  data,
+                  insertIT = function()
+                  {
+                      document.body.insertAdjacentHTML( 'afterbegin', data );
+                  },
+                  insert = function()
+                  {
+                      if( document.body ) insertIT();
+                      else document.addEventListener( 'DOMContentLoaded', insertIT );
+                  };
+      
+              if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision & debug == false )
+              {
+                  data = localStorage.getItem( 'inlineSVGdata' );
+                  if( data )
+                  {
+                      insert();
+                      return true;
+                  }
+              }
+      
+              try
+              {
+                  request = new XMLHttpRequest();
+                  request.open( 'GET', file, true );
+                  request.onload = function()
+                  {
+                      if( request.status >= 200 && request.status < 400 )
+                      {
+                          data = request.responseText;
+                          insert();
+                          if( isLocalStorage )
+                          {
+                              localStorage.setItem( 'inlineSVGdata',  data );
+                              localStorage.setItem( 'inlineSVGrev',   revision );
+                          }
+                      }
+                  }
+                  request.send();
+              }
+              catch( e ){}
+      
+          }( window, document ) );
+      
+    </script>
+  </head>
+  <body>
+    <header class="header"><a href="tel:+7(812)998-88-91" class="headerPhoneIco">
+            <svg class="icon-telbutton">
+              <use xlink:href="#icon-telbutton"></use>
+            </svg></a><a href="/">
+            <svg class="logo">
+              <use xlink:href="#logo"></use>
+            </svg></a>
+      <div id="gamburger" class="headerMenu headerMenuContacts">
+            <svg class="icon-burger">
+              <use xlink:href="#icon-burger"></use>
+            </svg>
+        <div id="gamDropdown" class="headerMenuWrap"><a href="http://glavpivo.saydanke.ru/html/public/aboutUs.html" class="headerMenuItems">О нас</a><a href="http://glavpivo.saydanke.ru/html/public/netMarkets.html" class="headerMenuItems">Сеть магазинов</a><a href="http://glavpivo.saydanke.ru/html/public/assortment.html" class="headerMenuItems">Ассортимент</a><a href="http://glavpivo.saydanke.ru/html/public/contacts.html" class="headerMenuItems">Контакты</a>
+        </div>
+      </div>
+      <div class="headerMenuNear">
+        <div class="headerMenuNearWrap">
+          <p>Мы рядом</p>
+          <p class="headerMenuNearTextRight">6 км.</p>
+        </div>
+        <div class="headerMenuNearWrap">
+          <p class="headerMenuNearTextWhite">Коменданский пр. 25 к.1</p>
+          <div class="typeOfMarket">Магазин-пивная</div>
+          <p class="headerMenuNearTextRight">Открыто до 22:00</p>
+        </div>
+        <div class="headerMenuNearHowToFind">
+          <div class="headerMenuNearHowToFindIcon">
+                <svg class="searchlocation">
+                  <use xlink:href="#searchlocation"></use>
+                </svg>
+          </div>
+          <p class="headerMenuNearHowToFindText">Как найти?</p>
+        </div>
+      </div>
+    </header>
+    <div class="mask popUpAge">
+      <div class="popUpAgeWindow">
+        <div class="popUpAgeLogo">
+              <svg class="logo-age">
+                <use xlink:href="#logo-age"></use>
+              </svg>
+        </div>
+        <div class="popUpAgeHeader">
+          <h2>Сайт доступен только для лиц старше 18-ти лет. </br> Вам больше 18-ти лет?</h2>
+        </div>
+        <div class="popUpAgeButtons">
+          <div class="popUpAgeButton popUpAgeButtonYes">Да</div>
+          <div class="popUpAgeButton popUpAgeButtonNo">Нет</div>
+        </div>
+        <div class="popUpAgeWarning">
+          <div class="popUpAgeBitMap"></div>
+              <svg class="warningLabel">
+                <use xlink:href="#warningLabel"></use>
+              </svg>
+              <svg class="warniingLabelDesctop">
+                <use xlink:href="#warniingLabelDesctop"></use>
+              </svg>
+        </div>
+      </div>
+    </div>
+    <section class="aboutUs"> 
+      <div class="pageWrap">
+        <h1 class="aboutUsMainTitle">О нас</h1>
+        <h2 class="aboutUsSimpleTitle">Главпиво</h2>
+        <p class="aboutUsMainText"> Сеть магазинов «ГлавПиво» на сегодняшний день является одной из самых быстроразвивающихся торговых сетей в Петербурге.</p>
+        <div class="aboutUsLinkItems"><a data-scroll href="#aboutUsWhyWe" class="aboutUsLinkItem">
+            <div class="aboutUsLinkItemLine"></div>
+            <h4 class="aboutUsLinkItemText">Почему </br>именно мы?</h4></a><a data-scroll href="#aboutUsHistory" class="aboutUsLinkItem">
+            <div class="aboutUsLinkItemLine"></div>
+            <h4 class="aboutUsLinkItemText">История компании</h4></a><a data-scroll href="#aboutUsGlavpivoToday" class="aboutUsLinkItem">
+            <div class="aboutUsLinkItemLine"></div>
+            <h4 class="aboutUsLinkItemText">Компания сегодня</h4></a><a data-scroll href="#aboutUsTeam" class="aboutUsLinkItem">
+            <div class="aboutUsLinkItemLine"></div>
+            <h4 class="aboutUsLinkItemText">Команда</h4></a><a data-scroll href="#aboutUsMap" class="aboutUsLinkItem">
+            <div class="aboutUsLinkItemLine"></div>
+            <h4 class="aboutUsLinkItemText">Развитие </br>сети на карте</h4></a></div>
+      </div>
+    </section>
+    <section id="aboutUsWhyWe" class="aboutUsWhyWe">
+      <div class="aboutUsPageWrap">
+        <h2 class="aboutUsSimpleTitle">Почему<br/> именно мы?</h2>
+        <div class="aboutUsWhyWeItems">
+          <div class="aboutUsWhyWeItem">
+                <svg class="beer-icon">
+                  <use xlink:href="#beer-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText">Настоящее свежее пиво и непиво</div>
+          </div>
+          <div class="aboutUsWhyWeItem">
+                <svg class="fish-icon">
+                  <use xlink:href="#fish-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText">86 позиций оригинальных закусок</div>
+          </div>
+          <div class="aboutUsWhyWeItem">
+                <svg class="brewman-icon">
+                  <use xlink:href="#brewman-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText">Лучшие отечественные пивовары</div>
+          </div>
+          <div class="aboutUsWhyWeItem">
+                <svg class="spb-icon">
+                  <use xlink:href="#spb-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText">Во всех районах Санкт-Петербурга и ближайших пригородов</div>
+          </div>
+          <div class="aboutUsWhyWeItem">
+                <svg class="crab-icon">
+                  <use xlink:href="#crab-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText"> Живая рыба и раки прямо в пивной</div>
+          </div>
+          <div class="aboutUsWhyWeItem">
+                <svg class="gift-icon">
+                  <use xlink:href="#gift-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText"> Программы лояльности для клиентов</div>
+          </div>
+          <div class="aboutUsWhyWeItem">
+                <svg class="rouble-icon">
+                  <use xlink:href="#rouble-icon"></use>
+                </svg>
+            <div class="aboutUsWhyWeItemText"> Доступные каждому цены</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="aboutUsHistory" class="aboutUsHistory">
+      <div class="aboutUsPageWrap">
+        <h2 class="aboutUsSimpleTitle">История компании</h2>
+        <h1 class="aboutUsHistoryBigTitleYear">2010</h1>
+        <div class="aboutUsHistoryEventsWrap">
+          <div style="background-image: url(img/oldPhoto.jpg)" class="aboutUsHistoryEventsOldPhoto"></div>
+          <div class="aboutUsHistoryEvents">
+            <div class="aboutUsHistoryEvent">
+              <div class="aboutUsHistoryEventDateWrap">
+                <div class="aboutUsHistoryEventDate">2 января</div>
+                <div class="aboutHistoryEventDateLine"></div>
+              </div>
+              <div class="aboutUsHistoryEventDescription">На новогодних праздниках «ГлавПиво» открывает первую торговую точку в Кировском районе Санкт-Петербурга.</div>
+            </div>
+            <div class="aboutUsHistoryEvent">
+              <div class="aboutUsHistoryEventDateWrap">
+                <div class="aboutUsHistoryEventDate">12 января</div>
+                <div class="aboutHistoryEventDateLine"></div>
+              </div>
+              <div class="aboutUsHistoryEventDescription">Удачливому покупателю был выдан первый бонусный литр по карте постоянного клиента.</div>
+            </div>
+            <div class="aboutUsHistoryEvent">
+              <div class="aboutUsHistoryEventDateWrap">
+                <div class="aboutUsHistoryEventDate">16 марта</div>
+                <div class="aboutHistoryEventDateLine"></div>
+              </div>
+              <div class="aboutUsHistoryEventDescription">В первой точке сети появляются развесные снеки (анчоус, минтай, янтарная рыба, осьминог, горбуша) и другие закуски.</div>
+            </div>
+            <div class="aboutUsHistoryEvent">
+              <div class="aboutUsHistoryEventDateWrap">
+                <div class="aboutUsHistoryEventDate">5 сентября</div>
+                <div class="aboutHistoryEventDateLine"></div>
+              </div>
+              <div class="aboutUsHistoryEventDescription">ГлавПиво открывает второй магазин разливного пива на Торфяной дороге 2</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="aboutUsHistoryLineWrap">
+        <div class="aboutUsHistoryLine">
+          <div class="aboutUsHistoryLineTrue"></div>
+        </div>
+        <div class="aboutUsPageWrap">
+          <div class="aboutUsHistoryLineYears">
+            <div class="aboutUsHistoryLineYear aboutUsHistoryLineYearActive">2010</div>
+            <div class="aboutUsHistoryLineYear">2011</div>
+            <div class="aboutUsHistoryLineYear">2012</div>
+            <div class="aboutUsHistoryLineYear">2013</div>
+            <div class="aboutUsHistoryLineYear">2014</div>
+            <div class="aboutUsHistoryLineYear">2015</div>
+            <div class="aboutUsHistoryLineYear">2016</div>
+            <div class="aboutUsHistoryLineYear">2017</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="aboutUsGlavpivoToday" class="aboutUsGlavpivoToday">
+      <div class="aboutUsPageWrap">
+        <h2 class="aboutUsSimpleTitle textAlignLeft">Главпиво сегодня</h2>
+        <p class="aboutUsGlavpivoTodayDesc">Данные о росте приведены по отношению к данным на 31 декабря 2015 года.</p>
+        <div class="aboutUsGlavpivoTodayItems">
+          <div class="aboutUsGlavpivoTodayItem">
+            <div class="aboutUsGlavpivoTodayItemWrapTop">
+              <h2 class="aboutUsGlavpivoTodayItemNumber">9</h2>
+              <div class="aboutUsGlavpivoTodayItemLine"></div>
+            </div>
+            <div class="aboutUsGlavpivoTodayItemWrapBottom">
+              <div class="aboutUsGlavpivoTodayItemText">лет успешной работы</div>
+              <div class="aboutUsGlavpivoTodayItemPercent">
+                    <svg class="greenArrow">
+                      <use xlink:href="#greenArrow"></use>
+                    </svg>
+                <p class="aboutUsGlavpivoTodayItemPercentValue">+12,5%</p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutUsGlavpivoTodayItem">
+            <div class="aboutUsGlavpivoTodayItemWrapTop">
+              <h2 class="aboutUsGlavpivoTodayItemNumber">12</h2>
+              <div class="aboutUsGlavpivoTodayItemLine"></div>
+            </div>
+            <div class="aboutUsGlavpivoTodayItemWrapBottom">
+              <div class="aboutUsGlavpivoTodayItemText">пивоварен, представленных в магазинах и пивных.</div>
+              <div class="aboutUsGlavpivoTodayItemPercent">
+                    <svg class="greenArrow">
+                      <use xlink:href="#greenArrow"></use>
+                    </svg>
+                <p class="aboutUsGlavpivoTodayItemPercentValue">+12,5%</p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutUsGlavpivoTodayItem">
+            <div class="aboutUsGlavpivoTodayItemWrapTop">
+              <h2 class="aboutUsGlavpivoTodayItemNumber">49</h2>
+              <div class="aboutUsGlavpivoTodayItemLine"></div>
+            </div>
+            <div class="aboutUsGlavpivoTodayItemWrapBottom">
+              <div class="aboutUsGlavpivoTodayItemText">торговых точек, включая магазины-пивные.</div>
+              <div class="aboutUsGlavpivoTodayItemPercent">
+                    <svg class="greenArrow">
+                      <use xlink:href="#greenArrow"></use>
+                    </svg>
+                <p class="aboutUsGlavpivoTodayItemPercentValue">+12,5%</p>
+              </div>
+            </div>
+          </div>
+          <div class="aboutUsGlavpivoTodayItem">
+            <div class="aboutUsGlavpivoTodayItemWrapTop">
+              <h2 class="aboutUsGlavpivoTodayItemNumber">50</h2>
+              <div class="aboutUsGlavpivoTodayItemLine"></div>
+            </div>
+            <div class="aboutUsGlavpivoTodayItemWrapBottom">
+              <div class="aboutUsGlavpivoTodayItemText">различных сортов пива и напитков</div>
+              <div class="aboutUsGlavpivoTodayItemPercent">
+                    <svg class="greenArrow">
+                      <use xlink:href="#greenArrow"></use>
+                    </svg>
+                <p class="aboutUsGlavpivoTodayItemPercentValue">+12,5%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="aboutUsTeam" class="aboutUsTeam">
+      <div class="aboutUsPageWrap">
+        <h2 class="aboutUsSimpleTitle textAlignLeft">Команда</h2>
+        <div class="aboutUsTeamWorkers">
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг» подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг» подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг»</div>
+          </div>
+          <div class="aboutUsTeamWorker">
+            <div style="background-image:url(&quot;img/avatarMaxim.jpg&quot;);" class="aboutUsTeamWorkerImage"></div>
+            <div class="aboutUsTeamWorkerFirstName">Максим</div>
+            <div class="aboutUsTeamWorkerLastName"> Кирай</div>
+            <div class="aboutUsTeamWorkerStatus">Руководитель подразделения «ГлавПиво Юг»</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="aboutUsMap" class="aboutUsMap">
+      <div class="aboutUsPageWrap aboutUsMapTitile">
+        <h2 class="aboutUsSimpleTitle textAlignLeft">Развитие </br> сети магазинов </h2>
+      </div>
+      <div id="map-aboutUs"></div>
+      <div class="aboutUsMapHistoryLine">
+        <div class="aboutUsMapHistoryLineWrap">
+          <div class="aboutUsPageWrap">
+            <div class="aboutUsMapHistoryLineYears">
+              <div class="aboutUsMapHistoryLineYear aboutUsMapHistoryLineYearActive">2010</div>
+              <div class="aboutUsMapHistoryLineYear">2011</div>
+              <div class="aboutUsMapHistoryLineYear">2012</div>
+              <div class="aboutUsMapHistoryLineYear">2013</div>
+              <div class="aboutUsMapHistoryLineYear">2014</div>
+              <div class="aboutUsMapHistoryLineYear">2015</div>
+              <div class="aboutUsMapHistoryLineYear">2016</div>
+              <div class="aboutUsMapHistoryLineYear">2017</div>
+            </div>
+          </div>
+          <div class="aboutUsMapHistoryLineBack">
+            <div class="aboutUsMapHistoryLineTrue"></div>
+          </div>
+          <div class="aboutUsPageWrap">
+            <div class="aboutUsMapHistoryLineTextItems">
+              <div class="aboutUsMapHistoryLineTextItem">4 магазина</div>
+              <div class="aboutUsMapHistoryLineTextItem">8 магазина</div>
+              <div class="aboutUsMapHistoryLineTextItem">11 магазина</div>
+              <div class="aboutUsMapHistoryLineTextItem">18 магазина</div>
+              <div class="aboutUsMapHistoryLineTextItem">24 магазина </br> 2 пивные</div>
+              <div class="aboutUsMapHistoryLineTextItem">34 магазина </br> 4 пивные</div>
+              <div class="aboutUsMapHistoryLineTextItem">34 магазина </br> 4 пивные</div>
+              <div class="aboutUsMapHistoryLineTextItem">43 магазина </br> 6 пивные</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="js/mapAboutUs.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&amp;callback=initMap"></script>
+    <div class="newsMain"><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a></div>
+    <footer class="footer">
+      <div class="footerTop">
+        <div class="footerMenu">
+          <div class="footerMenuItem footerMenuItemActive"><a href="#">Главная</a></div>
+          <div class="footerMenuItem"><a href="#">О нас</a></div>
+          <div class="footerMenuItem"><a href="#">Сеть магазинов</a></div>
+          <div class="footerMenuItem"><a href="#">Ассортимент</a></div>
+          <div class="footerMenuItem"><a href="#">Контакты</a></div>
+        </div>
+        <div class="footerContact">
+          <div class="footerContactIcon">
+                <svg class="icon-phone">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+          </div>
+          <div class="footerContactText">+7 (812) 998-88-91 </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <div class="footerBottomLeft">
+          <div class="footerCopyright">
+            <p>© 2014–2016 ООО «ГлавПиво»</br> Все права защищены.</p>
+          </div>
+          <div class="footerWarning">
+            <div class="warningIcon"></div>
+            <p>Чрезмерное потребление алкогольной продукции вредит Вашему здоровью</p>
+          </div>
+          <div class="footerSocialIcons"><a href="#">
+                  <svg class="icon-fb">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg></a><a href="#">
+                  <svg class="icon-vk">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg></a><a href="#">
+                  <svg class="icon-inst">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg></a></div>
+        </div>
+        <div class="footerSocialDevelop">
+          <p>Создание - <a href="#">Danke</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/gamburger.js"></script>
+    <script src="./js/cookie.js"></script>
+  </body>
+</html>

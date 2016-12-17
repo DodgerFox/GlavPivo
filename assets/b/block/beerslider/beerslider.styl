@@ -1,0 +1,37 @@
+.assortmentBeerSliderWrap
+    width 940px
+    margin 0 auto
+    padding-top 50px
+    margin-bottom -25px
+    +below(940px)
+        width auto
+        margin-left 78px
+    +below(750px)
+        width auto
+        margin-left 40px
+    
+.assortmentBeerSlider
+    width 132%
+    height 315px
+    box horizontal middle
+    position relative
+    right 24px
+    padding-left 20px
+    +below(940px)
+        width 100%
+    +below(768px)
+        padding-left 10px
+    
+.assortmentSliderItems
+    width calc(100% - 83px)
+    margin 0
+.beersliderItem
+    height 315px
+    padding 0 20px
+    box vertical middle center
+
+.assortmentSliderItems.swiper-container-autoheight .swiper-wrapper
+    -webkit-box-align end
+    -ms-flex-align end
+    -webkit-align-items flex-end
+    align-items flex-end

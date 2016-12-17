@@ -1,0 +1,28 @@
+extends _layout
+
+block content
+    section.contacts
+        //- Сделать структуру  .contactItems > .contactItem > h2 + p
+        .contactItems
+            h1.contactsHeaderMain Контакты
+            .contactItem.contactItemAdress
+                p 198188, Россия,  Санкт-Петербург, ул. Васи Алексеева 6, лит. А, офисный центр ТРК «Румба» офис №527
+            .contactItem
+                h2.contactsHeader По отзывам, предложениям и другим вопросам
+                p +7 (812) 988-88-91
+            .contactItem
+                h2.contactsHeader Бухгалтерия
+                p +7 (911) 726-13-63
+            .contactItem
+                h2.contactsHeader Отдел кадров
+                p +7 (951) 645-31-26
+            .contactItem
+                h2.contactsHeader Отдел логистики
+                p +7 (931) 213-31-71
+            .contactItem
+                h2.contactsHeader E-mail
+                p
+                    a(href="#") info@glav-beer.ru
+        #map
+    script(src="js/map.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&callback=initMap")

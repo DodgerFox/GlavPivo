@@ -1,0 +1,64 @@
+.contacts
+   background #eaeaea
+#map
+   height 795px
+   width 100%
+   +below(750px)
+       height 375px
+
+.headerMenuContacts
+    .headerMenuItems
+        color #333!important
+        &:hover
+            color #ffd427 !important
+
+.contactItems
+    size 324px 626px
+    background-color white
+    border-radius 10px
+    position absolute
+    z-index 9
+    top 125px
+    right 100px
+    padding 35px
+    box start vertical
+    box-shadow 10px 10px 20px rgba(0, 0, 0, .1)
+    +below(750px)
+        top 0
+        left 0
+        height auto
+        width 100%
+        position relative
+        padding-top 120px
+        border-radius 0
+        box-shadow none
+    p
+        font-family 'Muller-Regular', Arial
+        line-height 24px
+        margin-top 8px
+        letter-spacing .08px
+        font-size 16px
+        a
+            color black
+            text-decoration none
+            padding-bottom 4px
+            border-bottom 1px solid #ffd427
+            transition .3s all ease-in-out
+        :hover
+            border-bottom 1px solid #fff
+
+.contactsHeaderMain
+    font-size 34px
+    font-family 'Muller-Black'
+    padding-bottom 15px
+
+.contactsHeader
+    font-size 16px
+    font-family 'Muller-Bold'
+    margin-top 19px
+
+.contactItemAdress
+    width auto
+    +below(750px)
+        order 10
+        margin-top 20px

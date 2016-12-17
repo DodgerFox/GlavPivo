@@ -1,0 +1,80 @@
+.newsMain
+    height 210px
+    width 100%
+    box horizontal middle
+    +below(640px)
+        flex-flow row wrap
+        height auto
+        
+.newsMainItem
+    height 100%
+    width 33.3333%
+    background-size 150%
+    background-position center
+    text-decoration none
+    padding 0px 45px
+    position relative
+    overflow hidden
+    &:before
+        content ''
+        position absolute
+        width 100%
+        height 100%
+        left 0
+        z-index 1
+        transition 0.3s all
+    &:hover
+        .mainNewsItemImage
+            transform: scale(1.3)
+        &:before
+            background rgba(0, 0, 0, .4)
+        .newsMainItemIcon
+            margin-right -10px
+            background-color #ffd427
+    +below(1180px)
+        padding 0 25px
+    +below(980px)
+        width 50%
+        &:last-child
+            display none
+            width 0
+    +below(640px)
+        flex 1 100%
+        width 100%
+        height 164px
+
+.newsMainItemsRowItem
+    box horizontal middle space-between
+    margin-top 125px
+    position relative
+    z-index 10
+    +below(640px)
+        margin-top 95px
+        
+.newsMainItemHeader
+    font-family "Muller-Bold"
+    color white
+    font-size 22px
+    width 80%
+    +below(1060px)
+        font-size 18px
+        
+.newsMainItemIcon
+    size 43px
+    border-radius 50%
+    background-color #fff
+    box vertical middle center
+    transition 0.4s all
+    margin-right 25px
+    svg
+        size 24px
+
+.mainNewsItemImage
+    width 100%
+    height 100%
+    top 0px
+    left 0px
+    position absolute
+    transition 0.3s all
+    background-size 150%
+    background-position center

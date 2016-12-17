@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="13px" height="16px" viewBox="0 0 13 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>ArrowLeft</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1280" transform="translate(-567.000000, -2239.000000)" stroke="#94C51C" fill="#94C51C">
+            <g id="Content" transform="translate(0.000000, 150.000000)">
+                <g id="Company-today" transform="translate(172.000000, 2000.000000)">
+                    <g id="12" transform="translate(246.000000, 88.000000)">
+                        <g id="badge" transform="translate(150.000000, 0.000000)">
+                            <g id="ArrowLeft" transform="translate(5.500000, 8.961538) rotate(90.000000) translate(-5.500000, -8.961538) translate(-2.000000, 3.461538)">
+                                <g transform="translate(7.538462, 5.500000) rotate(-180.000000) translate(-7.538462, -5.500000) translate(0.538462, -0.000000)" id="Group">
+                                    <g transform="translate(0.000000, -0.000000)">
+                                        <path d="M7.74033653,0.134739436 L7.74033653,0.134739436 C7.5550246,0.314392018 7.5550246,0.618419463 7.74033653,0.798072045 L11.8884727,4.81952598 L0.484661956,4.81952598 C0.213821451,4.81952598 7.10542736e-15,5.02681742 7.10542736e-15,5.28938658 L7.10542736e-15,5.28938658 C7.10542736e-15,5.55195574 0.213821451,5.75924718 0.484661956,5.75924718 L11.8884727,5.75924718 L7.74033653,9.79452055 C7.5550246,9.97417313 7.5550246,10.2782006 7.74033653,10.4578532 L7.74033653,10.4578532 C7.92564845,10.6375057 8.23925324,10.6375057 8.42456517,10.4578532 L13.3994776,5.62105289 C13.5847895,5.4414003 13.5847895,5.13737286 13.3994776,4.95772028 L8.42456517,0.134739436 C8.23925324,-0.0449131454 7.92564845,-0.0449131454 7.74033653,0.134739436 L7.74033653,0.134739436 Z" id="Shape"></path>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

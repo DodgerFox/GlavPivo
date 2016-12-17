@@ -1,0 +1,512 @@
+.aboutUsPageWrap
+    width 940px
+    margin 0 auto
+    overflow hidden
+    +below(1165px)
+        width 760px
+    +below(880px)
+        width auto 
+        margin-right 40px
+        margin-left 40px
+
+.aboutUs
+    padding-bottom 47px
+    overflow hidden
+    .pageWrap
+        +below(750px)
+            margin-top 120px
+h1.aboutUsMainTitle
+    color #090909
+    font-family 'Muller-Black'
+    font-size 40px
+    font-weight 900
+    letter-spacing -0.11px
+    line-height 40px
+    padding-bottom 43px
+
+h2.aboutUsSimpleTitle
+    color black
+    font-family 'Muller-Black'
+    font-size 18px
+    font-weight 900
+    letter-spacing 5px
+    line-height 21px
+    text-transform uppercase
+    text-align center
+    +below(500px)
+        text-align left
+
+p.aboutUsMainText
+    color #5d5d5d
+    font-family 'Muller-Regular'
+    font-size 22px
+    font-weight 400
+    letter-spacing -0.06px
+    line-height 32px
+    width 600px
+    text-align center
+    margin 34px auto
+    +below(670px)
+        width 100%
+    +below(500px)
+        text-align left
+
+.aboutUsLinkItems
+    width 100%
+    margin-top 115px
+    box horizontal space-between
+    +below(730px)
+        margin-top 46px
+    a 
+        text-decoration none
+    
+.aboutUsLinkItemLine
+    size 100% 3px
+    background-color #ffd427
+    position absolute
+    z-index 1
+    transition 0.3s all ease-in-out
+
+.aboutUsLinkItem
+    width 140px
+    margin 0px 10px
+    position relative
+    transition 0.3s all ease-in-out
+    cursor pointer
+    &:hover
+        .aboutUsLinkItemLine
+            height 100%
+            border-radius 10px
+    &:below(1165px)
+        width 125px
+
+.aboutUsLinkItemText
+    text-align center
+    color black
+    font-family 'Muller-Bold'
+    font-size 16px
+    font-weight 700
+    letter-spacing 0.2px
+    margin-top 17px
+    margin-bottom 17px
+    position relative
+    text-decoration none
+    z-index 2
+
+.aboutUsWhyWe
+    background-color #ffd427
+    padding-top 68px
+    padding-bottom 150px
+    +below(750px)
+        padding-bottom 68px
+
+.aboutUsWhyWeItems
+    box middle wrap center
+    +below(500px)
+        box start left
+        flex-direction column
+
+.aboutUsWhyWeItem
+    width 182px
+    margin 0 25px
+    margin-top 61px
+    box vertical center
+    +below(839)
+        margin 0
+        margin-top 61px
+        margin-right 20px
+    +below(500px)
+        box horizontal start
+        margin-top 34px
+        width 100%
+    svg 
+        size 90px 68px
+        +below(500px)
+            margin-right 27px
+            min-width 65px 
+            min-height 57px
+            max-width 65px
+            max-height 57px
+
+.aboutUsWhyWeItemText
+    text-align center
+    margin-top 25px
+    color black
+    font-family 'Muller-Bold'
+    font-size 18px
+    font-weight 700
+    line-height 22px
+    +below(500px)
+        margin-top 0
+
+.aboutUsHistory
+    padding-top 40px
+    +below(750px)
+        padding-top 68px
+
+.aboutUsHistoryBigTitleYear
+    color black
+    font-family 'Muller-Black'
+    font-size 60px
+    font-weight 900
+    letter-spacing 5px
+    margin-top 36px
+    +below(1165px)
+        padding-bottom 15px
+
+.aboutUsHistoryEventsWrap
+    box vertical right
+    margin-right 40px
+    +below(1060px)
+        box vertical left
+    +below(635px)
+        margin-right 0
+
+
+.aboutUsHistoryEvents
+    padding-top 6px
+    width 670px
+    box start wrap
+    +below(556px)
+        box vertical start
+        width 100%
+    
+.aboutUsHistoryEvent
+    width 255px
+    padding-bottom 55px
+    margin-right 75px
+    +below(960px)
+        margin-right 25px
+    +below(635px)
+        margin-right 3%
+        width 34%
+    +below(556px)
+        width 100%
+        margin-right 0px
+        padding-bottom 41px
+    
+.aboutUsHistoryEventDate
+    color black
+    font-family 'Muller-Bold'
+    font-size 16px
+    font-weight 700
+    letter-spacing -0.04px  
+
+.aboutUsHistoryEventDateWrap
+    width 100%
+    box horizontal
+    +below(630px)
+        margin-right 22px
+    
+.aboutHistoryEventDateLine
+    width 60%
+    height 10px
+    position relative
+    margin-left 15px
+    background-color #e0cec5
+    margin-top 2px
+    +below(556px)
+        display none
+
+.aboutUsHistoryEventDescription
+    color black
+    font-family 'Muller-Light'
+    font-size 18px
+    font-weight 300
+    letter-spacing -0.05px
+    line-height 28px
+    margin-top 20px
+
+.aboutUsHistoryEventsOldPhoto
+    size 225px 408px
+    position absolute
+    right 0px
+    background-color #333
+    box-shadow 20px 20px 40px rgba(189, 167, 156, 0.5)
+    +below(880px)
+        position relative
+        width 540px
+        height 300px
+        margin-bottom 36px
+    +below(635px)
+        width 100%
+    +below(450px)
+        height 250px
+    
+
+.aboutUsHistoryLine
+    size 1100px 16px
+    margin 30px auto
+    margin-bottom 0px
+    background-color #f6f6f6
+    border-radius 100px
+    +below(1243px)
+        width auto
+        margin-right 45px
+        margin-left 45px
+
+.aboutUsHistoryLineTrue
+    size 100px 19px
+    background-color #ffd427
+    border-radius 100px
+    
+.aboutUsHistoryLineYears
+    position relative
+    height 60px
+    box-sizing content-box
+    box horizontal space-between
+    padding 0px 8px
+    
+
+.aboutUsHistoryLineYear, .aboutUsMapHistoryLineYear
+    transform rotate(30deg)
+    -webkit-transform rotate(-90deg)
+    width 37px
+    margin-top 25px
+    position relative
+    transform rotate(-90deg)
+    color #414141
+    font-family 'Muller-Regular'
+    font-size 14px
+    font-weight 400
+    letter-spacing 0.9px
+    cursor pointer
+    &:hover
+        font-weight 700px
+        font-family 'Muller-Bold'
+        
+.aboutUsHistoryLineYear.aboutUsHistoryLineYearActive, .aboutUsMapHistoryLineYear.aboutUsMapHistoryLineYearActive
+    font-weight 700px
+    font-family 'Muller-Bold'
+
+.aboutUsMapHistoryLineYear
+    transform none
+    margin-top 0
+    &:before
+        size 1px 17px
+        background-color #deb821
+        content ''
+        position absolute
+        top 20px 
+        left 17px
+
+.textAlignLeft
+    text-align left!important
+    
+.aboutUsGlavpivoTodayDesc
+    width 290px 
+    color #c1c1c1
+    font-family 'Muller-Regular'
+    font-size 14px
+    font-weight 400
+    font-style italic
+    letter-spacing 0.08px
+    line-height 17px
+    margin-top 15px
+
+.aboutUsGlavpivoTodayItems
+    width 100%
+    box horizontal
+    margin-top 16px
+    +below(630px)
+        box start vertical 
+        flex-direction column
+
+.aboutUsGlavpivoTodayItem
+    width 25%
+    min-width 213px
+    margin 0px 15px
+    position relative
+    +below(1165px)
+        min-width auto
+    +below(630px)
+        width 100%
+        box horizontal start middle
+        margin 16px 0px
+    &:first-child
+        margin-left 0!important
+    &:last-child
+        margin-right 0!important
+
+.aboutUsGlavpivoTodayItemWrapTop
+    width 100%
+    box vertical center
+    +below(630px)
+        width 71px
+        margin-right 27px
+
+.aboutUsGlavpivoTodayItemWrapBottom
+    box vertical start
+    
+.aboutUsGlavpivoTodayItemNumber
+    color black
+    font-family 'Muller-Bold'
+    font-size 80px
+    font-weight 500
+    letter-spacing 5.33px
+    text-align center
+    margin-top 58px
+    margin-bottom -24px
+    position relative
+    z-index 2
+    +below(880px)
+        font-size 65px 
+    +below(630px)
+        margin-top 0
+        margin-bottom -20px
+        font-size 40px
+        padding-left 5px
+        
+.aboutUsGlavpivoTodayItemLine
+    width 100%
+    height 25px
+    background-color #ffd427
+    border-radius 23px
+    +below(630px)
+        size 71px 19px
+
+.aboutUsGlavpivoTodayItemText
+    color #5d5d5d
+    font-family 'Muller-Regular'
+    font-size 22px
+    font-weight 300
+    letter-spacing -0.06px
+    line-height 30px
+    margin-top 20px
+    +below(880px)
+        font-size 18px 
+        line-height 26px
+    +below(630px)
+        margin-top 0
+        line-height 18px
+        font-size 16px
+
+.aboutUsGlavpivoTodayItemPercent
+    color #94c51c
+    font-family 'Muller-Bold'
+    font-size 16px
+    font-weight 700
+    letter-spacing 0.09px
+    position absolute
+    right 0 
+    top 0
+    box horizontal middle
+    +below(630px)
+        position relative
+        margin-top 8px
+    svg 
+        size 14px 18px
+        margin-right 4px
+        margin-top -4px
+
+.aboutUsTeam
+    padding-top 74px
+    +below(750px)
+        padding-top 30px
+
+.aboutUsGlavpivoToday
+    padding-top 100px
+    
+    
+.aboutUsTeamWorkers
+    width 100% 
+    box horizontal wrap
+    padding-top 70px
+    +below(750px)
+        padding-top 34px
+
+.aboutUsTeamWorker
+    width 225px
+    margin 5px 0px
+    margin-right 10px
+    padding-bottom 40px
+    
+.aboutUsTeamWorkerImage
+    width 100%
+    height 225px
+    background-color #333
+
+.aboutUsTeamWorkerFirstName
+    color black
+    font-family 'Muller-Regular'
+    font-size 16px
+    font-weight 300
+    letter-spacing 0.89px
+    letter-spacing 0.79px
+    margin-top 26px
+
+.aboutUsTeamWorkerLastName
+    color black
+    font-family 'Muller-Bold'
+    font-size 16px
+    font-weight 700
+    letter-spacing 4.44px
+    text-transform uppercase
+    margin-top 4px
+
+.aboutUsTeamWorkerStatus
+    color black
+    font-family 'Muller-Regular'
+    font-size 15px
+    font-weight 300
+    letter-spacing 0.25px
+    line-height 20px
+    margin-top 10px
+
+#map-aboutUs
+    width 100%
+    height 595px
+    +below(700px)
+        height 375px
+
+section.aboutUsMap
+    .aboutUsPageWrap.aboutUsMapTitile
+        margin-top 95px
+        margin-bottom -95px
+        position relative
+        z-index 999
+
+.aboutUsMapHistoryLine
+    background-color #ffd427
+    width 100%
+    box-sizing border-box
+    padding 35px 0
+
+.aboutUsMapHistoryLineBack
+    padding 0px 37px
+    size 1020px 12px
+    background-color #dbb420
+    border-radius 100px
+    box-shadow 0 2px 20px rgba(0, 0, 0, 0.1)
+    margin 18px auto
+    +below(1243px)
+        width auto
+        margin-right 45px
+        margin-left 45px
+
+.aboutUsMapHistoryLineTrue
+    size 66px 12px
+    background-color #262626
+    border-radius 100px
+    position relative
+    z-index 10
+
+.aboutUsMapPageWrap
+    width 940px
+    margin 0px auto 
+    
+.aboutUsMapHistoryLineYears
+    box horizontal space-between
+    padding 0 14px 
+
+.aboutUsMapHistoryLineTextItems
+    box horizontal space-between
+    width 940px
+    margin 0 auto 
+    
+.aboutUsMapHistoryLineTextItem
+    color black
+    font-family 'Muller-Bold'
+    font-size 12px
+    font-weight 700
+    letter-spacing 0.15px

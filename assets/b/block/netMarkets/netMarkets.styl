@@ -1,0 +1,301 @@
+.netMarkets
+    overflow hidden
+    padding-bottom 20px
+    +below(750px)
+        padding-bottom 40px
+.netMarketsWrapCategoryBeer
+    width 100%
+    margin-bottom 0px
+    box start center
+    form
+        box start center
+    +below(600px)
+        display none
+.netMarketsMap
+    +below(750px)
+        display none
+.netMarketsCategoryBeerHeader,.netMarketsMapBeerHeader
+    color black
+    font-family "Muller-Black"
+    font-size 18px
+    font-weight 900
+    letter-spacing 5px
+    line-height 22px
+    text-transform uppercase
+    margin-right 27px
+
+.netMarketsMapBeerHeader
+    margin-top 70px
+    margin-left 40px
+    margin-right 40px
+select.gefes
+    display none
+.netMarketsSelectInput
+    padding 10px 5px
+    background #fff
+    color #1e1e1e
+    position relative
+    border none
+    color #1e1e1e
+    font-family 'Muller-Medium'
+    font-size 14px
+    letter-spacing -0.07px
+    line-height 17px
+    box start horizontal middle
+    border-top 1px solid #f9f9f9
+    padding-right 50px
+    &:nth-child(2)
+        border-top 0
+.netMarketsSelectInput
+    display none
+.activeInputNetMarket
+    display flex!important
+.select-wrap-one, .select-wrap-two
+    position relative
+    box start vertical middle
+    margin 0px 12px
+    padding 5px 20px
+    border-radius 21px
+    border 2px solid #ffd427
+    padding-right 40px
+    svg
+        size 20px
+        position absolute
+        right 10px
+    .icon-arrow-down
+        position absolute
+        top 20px
+        right 20px
+        z-index 11
+        size 12px 7px
+.select-wrap-close
+    border-radius 100px
+.netMarketsCities
+    color black
+    font-family "Muller-Regular"
+    font-size 20px
+    font-weight 400
+    letter-spacing 0.06px
+    line-height 24px
+    padding-top 40px
+    +below(600px)
+        font-family "Muller-Black"
+        font-size 18px
+        font-weight 900
+        letter-spacing 5px
+        line-height 22px
+        text-transform uppercase
+
+.netMarketsItemsWrap
+    .netMarketsCities
+        +below(600px)
+            margin-left 40px
+            margin-right 40px
+            text-align left
+
+.netMarketsItems
+    width 100%
+    margin-top 32px
+    box horizontal stretch wrap
+    +below(600px)
+        margin-top 16px
+
+.netMarketsItem
+    border-top solid 2px #f7f7f7
+    width 31%
+    margin 10px
+    font-family "Muller-Regular"
+    padding 18px 20px 6px 40px
+    position relative
+    transition 0.3s all
+    +below(1165px)
+        width 47%
+    +below(890px)
+        width 45%
+    +below(700px)
+        width 100%
+    +below(600px)
+        margin 10px 0px
+        padding 6px 40px 18px 66px
+        border-top 0
+        border-bottom solid 1px #ccc
+        &:last-child
+            border-bottom none
+    &:after,
+    &:before
+       content ''
+       opacity 0
+       transition 0.3s all
+    &:hover
+        h4
+            color #fff!important
+            +below(600px)
+                color black!important
+        p,h4
+            z-index 11000
+            position relative
+            color #e0cec5
+            +below(600px)
+                color #777
+                z-index 99
+        svg,p.netMarketsMeters
+            z-index: 11000
+            color #ffd427
+            +below(600px)
+                color black!important
+                z-index 99
+        .netMarketsButtonMore, .netMarketsTime
+            opacity 1
+            z-index 11000
+            position absolute
+            +below(600px)
+                display none
+        &:before
+            content ''
+            position absolute
+            width 100%
+            bottom -98px
+            background-color rgba(0, 0, 0, .65)
+            background-image url('../img/bglist.png')
+            z-index 1000
+            left 0px
+            top 0px
+            border-radius 6px
+            opacity 1
+            +below(600px)
+                display none
+        &:after
+            content ''
+            position absolute
+            width 100%
+            bottom -98px
+            background-color rgba(0, 0, 0, .65)
+            border-radius 6px
+            z-index 1001
+            left 0px
+            opacity 1
+            top 0px
+            +below(600px)
+                display none
+
+    h4
+        font-size 16px
+        padding-bottom 3px
+        font-family "Muller-Medium"
+    p
+        font-size 12px
+        color #777
+    .netMarketsButtonMore
+        opacity 0
+        bottom -82px
+        right 18px
+        font-size 12px
+        z-index -1
+        color #fff
+        position absolute
+        color #1e1e1e
+        letter-spacing -0.06px
+        line-height 14px
+        text-decoration none
+        font-family 'Muller-Bold'
+        size 97px 25px
+        box-sizing border-box
+        padding 6px 15px
+        background-color #ffd427
+        transition 0.2s all
+        border-radius 100px
+        box-shadow 1px 1px 0 #a18618
+        transition 0.2s ease
+        &:hover
+            border 1px #ffd427 solid
+            background-color transparent
+            padding 5px 13px
+            color #ffd427
+    .netMarketsTime
+        opacity 0
+        bottom -78px
+        z-index -1
+        left 40px
+        font-family 'Muller-Regular'
+        transition 0.2s all
+        position absolute
+    p.netMarketsMeters
+        position absolute
+        right 20px
+        top 30px
+        color black
+        font-size 11px
+        +below(600px)
+            right 40px
+            top 18px
+    p.netMarketsTime
+        size 125px 14px
+        color #ffd427
+        font-family "Muller-Medium"
+        font-size 12px
+        font-weight 400
+        letter-spacing -0.03px
+        line-height 14px
+    svg
+        position absolute
+        size 20px
+        left 14px
+        top 16px
+        border-radius 50%
+        background #ffd427
+        +below(600px)
+            left 40px
+            top 4px
+
+#map-netMarkets
+    height 650px
+    border-top 1px solid #ffd427
+    padding-top 30px
+    +below(750px)
+        height 375px
+        padding-top 0
+    +below(600px)
+        border-top 0
+
+
+select.gefes
+    background-color #fff
+    appearance none
+    position relative
+    overflow hidden
+    white-space nowrap
+    margin 4px
+    outline 0
+    background-repeat no-repeat
+    background-position 100% 50%
+    padding 5px
+    padding-right 16px
+    padding-left 18px
+    text-indent .01px
+    text-overflow ''
+    transition border .2s ease-in
+    border-radius 2px
+    cursor pointer
+    font normal 14px/22px Arial, sans-serif
+
+.netMarketsItemsWrap
+    margin-top 0
+    +below(600px)
+        margin 0
+
+.netMarketsMobileSliderWrap
+    display none
+    +below(600px)
+        display block
+.netMarketsMobileSliderHeader
+    color black
+    font-family "Muller-Black"
+    font-size 18px
+    font-weight 900
+    letter-spacing 5px
+    line-height 22px
+    text-transform uppercase
+
+.mobileVisibilityNone
+    +below(750px)
+        display none

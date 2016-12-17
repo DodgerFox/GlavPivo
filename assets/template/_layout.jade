@@ -1,0 +1,29 @@
+doctype
+html
+    head
+        title Главпиво
+        meta(charset='utf-8')
+        meta(name="viewport", content="width=device-width, user-scalable=yes")
+        link(href='./css/woff.css', type="text/css", rel="stylesheet")
+        link(href='./css/swiper.css', type="text/css", rel="stylesheet")
+        link(href='./css/blocks.css', type="text/css", rel="stylesheet")
+
+        link(href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600" rel="stylesheet")
+        //-link(rel="stylesheet" href="./css/fonts.css")
+        //- include _favicon.jade
+        <!--[if IE 8]><link rel="stylesheet" href="./css/blocks.ie.css"><![endif]-->
+        <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script><![endif]-->
+        include _svg.jade
+        include _mixin.jade
+
+
+    body
+        include block/header
+        
+        include block/pop_up_age
+        block content
+        include block/newsMain
+        include block/footer_new
+        script(src="./js/app.js")
+        script(src="./js/gamburger.js")
+        script(src="./js/cookie.js")

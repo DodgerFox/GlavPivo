@@ -1,0 +1,255 @@
+.product
+    overflow hidden
+    padding-top 150px
+    +below(620px)
+        padding-top 120px
+
+.productHeaderWrap
+    box space-between
+
+.productMainHeader
+    color #090909
+    font-family 'Muller-Black'
+    font-size 40px
+    font-weight 900
+    letter-spacing -.11px
+    line-height 40px
+    +below(650px)
+        font-size 42px
+
+.productButtonBackText
+    color black
+    font-family 'Muller-Regular'
+    font-size 16px
+    font-weight 400
+    letter-spacing -.04px
+    line-height 19px
+    margin-top 3px
+
+.productMainDescription
+    color #746963
+    font-family 'Muller-Regular'
+    font-size 18px
+    font-weight 400
+    letter-spacing -.13px
+    line-height 22px
+    margin-top 5px
+
+.productTextDescription
+    color #5d5d5d
+    font-family 'Muller-Regular'
+    font-size 18px
+    font-weight 400
+    letter-spacing -.05px
+    line-height 24px
+    margin-top 35px
+    padding-bottom 8px
+
+.productBody
+    box start horizontal space-between
+    position relative
+    +below(850px)
+        box vertical middle center
+
+.productImage
+    width 60%
+    min-width 403px
+    margin-left 30px
+    margin-right 80px
+    margin-top 88px
+    box vertical center
+    +below(1165px)
+        max-width 350px
+        width 350px
+        margin-right 20px
+        margin-left 20px
+    +below(1000px)
+        margin-right 5px
+        margin-left 0
+    +below(850px)
+        width 100%
+        box vertical center
+    +below(500px)
+        margin-top 50px
+    img
+        +below(1165px)
+            max-width 370px
+        +below(500px)
+            max-height 310px
+        +below(399px)
+            max-width 250px
+
+.productButtonBack
+    box horizontal space-between middle
+    min-width 165px
+    margin-left 10px
+    +below(500px)
+        display none
+
+.productButtonBackIcon
+    box vertical center middle
+    border-radius 50%
+    size 36px
+    background #ffd427
+    margin-right 14px
+    svg
+        size 20px
+.productCharacteristics
+    padding-left 15px
+    padding-bottom 30px
+    margin-bottom 42px
+
+.productCharacteristicsHeader
+    color black
+    font-family 'Muller-Bold'
+    font-size 16px
+    font-weight 700
+    letter-spacing -.04px
+    line-height 19px
+    margin-top 30px
+    padding-bottom 8px
+
+.productCharacteristicsLineWrap
+    margin-top 8px
+    position relative
+    padding-left 25px
+    padding-right 43px
+    padding-top 2px
+.productCharacteristicsLine
+    width 100%
+    background #eaeaea
+    border-radius 20px
+    height 8px
+    opacity .3
+
+.productCharacteristicsMinValue,
+.productCharacteristicsMaxValue
+    color #e4e8d1
+    font-family 'Muller-Bold'
+    font-size 12px
+    font-weight 700
+    letter-spacing -.03px
+    line-height 14px
+    top 0
+    position absolute
+.productCharacteristicsMinValue
+    left 0
+.productCharacteristicsMaxValue
+    right 0
+.productCharacteristicsTrueLine
+    height 8px
+    width 50%
+    background #333
+    border-radius 50px
+    margin-top -8px
+    position relative
+
+.productCharacteristicsTrueValue
+    color black
+    font-family 'Muller-Bold'
+    font-size 16px
+    font-weight 700
+    letter-spacing -.04px
+    line-height 19px
+    position absolute
+    top 20px
+.firstLine
+    .productCharacteristicsLine
+        background-image linear-gradient(to right, #f2e9e4 0, #e0cec5 100%)
+    .productCharacteristicsTrueLine
+        background-image linear-gradient(to right, #f2e9e4 0, #e0cec5 100%)
+
+.secondLine
+    .productCharacteristicsLine
+        background-image linear-gradient(to right, #e4e8d2 0, #a7d334 100%)
+    .productCharacteristicsTrueLine
+        background-image linear-gradient(to right, #e4e8d2 0, #a7d334 100%)
+.thirdLine
+    .productCharacteristicsLine
+        background-image linear-gradient(to right, #b0a693 0, #4f3913 100%)
+    .productCharacteristicsTrueLine
+        background-image linear-gradient(to right, #b0a693 0, #4f3913 100%)
+
+.productPresenceWrap
+    margin-top 42px
+
+.productStock
+    color #5d5d5d
+    font-family 'Muller-Regular'
+    font-size 18px
+    letter-spacing -.05px
+    line-height 24px
+    font-weight 400
+    span
+        font-family 'Muller-Bold'
+        color #000
+.productStockDesktop
+    +below(620px)
+        display none
+
+.productStockMobile
+    display none
+    margin-top 15px
+    padding-bottom 15px
+    +below(620px)
+        display flex
+
+.productWhereBuy
+    padding-top 74px
+
+.productNoMargin
+    margin-top 0 !important
+    +below(880px)
+        margin-left 35px !important
+        margin-right 35px !important
+.productWhereBuyHeader
+    color black
+    font-family 'Muller-Black'
+    font-size 18px
+    font-weight 900
+    letter-spacing 5px
+    text-transform uppercase
+    line-height 22px
+    margin-top 10px
+.productWhereBuyWrap
+    box space-between horizintal
+    +below(620px)
+        box vertical
+
+#map-product
+    height 650px
+    border-top 1px solid #ffd427
+    padding-top 16px
+    margin-top 24px
+    +below(750px)
+        height 375px
+        padding-top 0
+    +below(600px)
+        border-top 0
+.productNew
+    size 72px 24px
+    background-color #f5220f
+    border-radius 100px
+    position absolute
+    top 10px
+    left 0
+    box-sizing border-box
+    color #e2e2e2
+    font-family 'Muller-Bold'
+    font-size 12px
+    padding 5px 10px
+    font-weight 700
+    letter-spacing -.03px
+    line-height 14px
+.productAlso
+    padding-top 74px
+    padding-bottom 130px
+
+.descriptionMobile
+    display none
+    padding-bottom 5px
+    +below(620px)
+        display block
+.descriptionDesctop
+    +below(620px)
+        display none

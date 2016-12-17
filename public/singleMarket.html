@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главпиво</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link href="./css/woff.css" type="text/css" rel="stylesheet">
+    <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+    <link href="./css/blocks.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600" rel="stylesheet"><!--[if IE 8]><link rel="stylesheet" href="./css/blocks.ie.css"><![endif]-->
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script><![endif]-->
+    <script>
+      ;( function( window, document )
+          {
+              'use strict';
+      
+              var file     = './img/svghtml.html',
+                  revision = 1,
+                  debug = true;
+      
+              if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
+                  return true;
+      
+              var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
+                  request,
+                  data,
+                  insertIT = function()
+                  {
+                      document.body.insertAdjacentHTML( 'afterbegin', data );
+                  },
+                  insert = function()
+                  {
+                      if( document.body ) insertIT();
+                      else document.addEventListener( 'DOMContentLoaded', insertIT );
+                  };
+      
+              if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision & debug == false )
+              {
+                  data = localStorage.getItem( 'inlineSVGdata' );
+                  if( data )
+                  {
+                      insert();
+                      return true;
+                  }
+              }
+      
+              try
+              {
+                  request = new XMLHttpRequest();
+                  request.open( 'GET', file, true );
+                  request.onload = function()
+                  {
+                      if( request.status >= 200 && request.status < 400 )
+                      {
+                          data = request.responseText;
+                          insert();
+                          if( isLocalStorage )
+                          {
+                              localStorage.setItem( 'inlineSVGdata',  data );
+                              localStorage.setItem( 'inlineSVGrev',   revision );
+                          }
+                      }
+                  }
+                  request.send();
+              }
+              catch( e ){}
+      
+          }( window, document ) );
+      
+    </script>
+  </head>
+  <body>
+    <header class="header"><a href="tel:+7(812)998-88-91" class="headerPhoneIco">
+            <svg class="icon-telbutton">
+              <use xlink:href="#icon-telbutton"></use>
+            </svg></a><a href="/">
+            <svg class="logo">
+              <use xlink:href="#logo"></use>
+            </svg></a>
+      <div id="gamburger" class="headerMenu headerMenuContacts">
+            <svg class="icon-burger">
+              <use xlink:href="#icon-burger"></use>
+            </svg>
+        <div id="gamDropdown" class="headerMenuWrap"><a href="http://glavpivo.saydanke.ru/html/public/aboutUs.html" class="headerMenuItems">О нас</a><a href="http://glavpivo.saydanke.ru/html/public/netMarkets.html" class="headerMenuItems">Сеть магазинов</a><a href="http://glavpivo.saydanke.ru/html/public/assortment.html" class="headerMenuItems">Ассортимент</a><a href="http://glavpivo.saydanke.ru/html/public/contacts.html" class="headerMenuItems">Контакты</a>
+        </div>
+      </div>
+      <div class="headerMenuNear">
+        <div class="headerMenuNearWrap">
+          <p>Мы рядом</p>
+          <p class="headerMenuNearTextRight">6 км.</p>
+        </div>
+        <div class="headerMenuNearWrap">
+          <p class="headerMenuNearTextWhite">Коменданский пр. 25 к.1</p>
+          <div class="typeOfMarket">Магазин-пивная</div>
+          <p class="headerMenuNearTextRight">Открыто до 22:00</p>
+        </div>
+        <div class="headerMenuNearHowToFind">
+          <div class="headerMenuNearHowToFindIcon">
+                <svg class="searchlocation">
+                  <use xlink:href="#searchlocation"></use>
+                </svg>
+          </div>
+          <p class="headerMenuNearHowToFindText">Как найти?</p>
+        </div>
+      </div>
+    </header>
+    <div class="mask popUpAge">
+      <div class="popUpAgeWindow">
+        <div class="popUpAgeLogo">
+              <svg class="logo-age">
+                <use xlink:href="#logo-age"></use>
+              </svg>
+        </div>
+        <div class="popUpAgeHeader">
+          <h2>Сайт доступен только для лиц старше 18-ти лет. </br> Вам больше 18-ти лет?</h2>
+        </div>
+        <div class="popUpAgeButtons">
+          <div class="popUpAgeButton popUpAgeButtonYes">Да</div>
+          <div class="popUpAgeButton popUpAgeButtonNo">Нет</div>
+        </div>
+        <div class="popUpAgeWarning">
+          <div class="popUpAgeBitMap"></div>
+              <svg class="warningLabel">
+                <use xlink:href="#warningLabel"></use>
+              </svg>
+              <svg class="warniingLabelDesctop">
+                <use xlink:href="#warniingLabelDesctop"></use>
+              </svg>
+        </div>
+      </div>
+    </div>
+    <div class="singleMarketFeedback">
+      <div class="singleMarketFeedbackWrap">
+        <div class="singleMarketFeedbackWindow">
+          <div class="singleMarketFeedbacButtonClose">
+                <svg class="icon-close">
+                  <use xlink:href="#icon-close"></use>
+                </svg>
+          </div>
+          <h1 class="singleMarketFeedbackTitle">Оставить отзыв</h1>
+          <form class="singleMarketFeedbackForm">
+            <div class="singleMarketFeedbackFormInputWrap">
+              <input id="InputName" type="text" required class="singleMarketFeedbackInput">
+              <label for="InputName">Имя</label>
+            </div>
+            <div class="singleMarketFeedbackFormInputWrap">
+              <input id="InputTel" type="text" required class="singleMarketFeedbackInput">
+              <label for="InputTel">Телефон или почта</label>
+            </div>
+            <div class="singleMarketFeedbackFormInputWrap inputWrap100Per">
+              <textarea id="InputQuestion" rows="1" required class="singleMarketFeedbackBigInput"></textarea>
+              <label for="InputQuestion">Напишите отзыв или задайте вопрос</label>
+            </div>
+            <div class="singleMarketFeedbackFormInputWrap inputWrap100Per">
+              <input type="submit" value="Отправить отзыв" class="singleMarketFeedbackButton">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <section class="singleMarket">
+      <div class="pageWrap marginTop120">
+        <p class="singleMarkerHeaderDescMobile mobileHidden">Магазин - пивная</p>
+        <h1 class="singleMarketHeader">Наличная ул.33</h1>
+        <div class="singleMarkerHeaderDescWrap">
+          <p class="singleMarkerHeaderDesc">Магазин - пивная</p>
+          <div class="singleMarketsHeaderSchedule">
+            <div class="singleMarkerHeaderDescDate">
+              <h5 class="singleMarkerHeaderDescTitle">4 октября 2014 года</h5>
+              <p class="singleMarkerHeaderDescText">Дата открытия</p>
+            </div>
+            <div class="singleMarkerHeaderDescTime">
+                  <svg class="icon-clock">
+                    <use xlink:href="#icon-clock"></use>
+                  </svg>
+              <h5 class="singleMarkerHeaderDescTitle">11:00 — 22:00</h5>
+              <p class="singleMarkerHeaderDescText">Понедельник – суббота</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="awdwdawserger">
+        <div class="singleMarketPhotoSlider">
+          <div class="singleMarketSlider">
+            <div class="singleMarketSliderSwiper">
+              <div class="singleMarketSliderPreviousButton">
+                    <svg class="icon-arrow-left">
+                      <use xlink:href="#icon-arrow-left"></use>
+                    </svg>
+              </div>
+              <div class="singleMarketSliderNextButton">
+                    <svg class="icon-arrow-right">
+                      <use xlink:href="#icon-arrow-right"></use>
+                    </svg>
+              </div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide singlemarketslideritem"><img src="img/singleMarketSlider/image1.jpg"></div>
+                <div class="swiper-slide singlemarketslideritem"><img src="img/singleMarketSlider/image1.jpg"></div>
+                <div class="swiper-slide singlemarketslideritem"><img src="img/singleMarketSlider/image1.jpg"></div>
+                <div class="swiper-slide singlemarketslideritem"><img src="img/singleMarketSlider/image1.jpg"></div>
+                <div class="swiper-slide singlemarketslideritem"><img src="img/singleMarketSlider/image1.jpg"></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pageWrap pageWrapSingleSchedule">
+        <div class="singleMarketsHeaderScheduleMobile">
+          <div class="singleMarkerHeaderDescTime">
+                <svg class="icon-clock">
+                  <use xlink:href="#icon-clock"></use>
+                </svg>
+            <h5 class="singleMarkerHeaderDescTitle">11:00 — 22:00</h5>
+            <p class="singleMarkerHeaderDescText">Понедельник – суббота</p>
+          </div>
+          <div class="singleMarkerHeaderDescDate">
+            <h5 class="singleMarkerHeaderDescTitle">4 октября 2014 года</h5>
+            <p class="singleMarkerHeaderDescText">Дата открытия</p>
+          </div>
+        </div>
+      </div>
+      <div class="pageWrap pageWrapSingle">
+        <div class="assortimentHeaderWrap">
+          <h2 class="assortmentCategoryHeader">Ассортимент магазина</h2>
+          <select class="seda">
+            <option>First</option>
+          </select>
+        </div>
+        <div class="assortmentItem singleMarketItem">
+          <div class="assortimentItemCategory">
+            <h2 class="assortmentCategoryHeader singleMarketCategoryHeader">Разливное пиво</h2>
+            <p class="assortmentCategoryDescrip">У нас большой выбор бутылочного пива, произведенного в удаленных концах России.</p>
+          </div>
+          <div class="assortmentBeerItems">
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/brand-image.jpg');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p><a href="/productOfAssortment.html" class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardTagNew">Новинка</div>
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/beerpicture.png');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/brand-image2.jpg');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/beerpicture.png');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/beerpicture.png');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/beerpicture.png');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="assortmentItem">
+          <div class="assortimentItemCategory">
+            <h2 class="assortmentCategoryHeader singleMarketCategoryHeader">Бутылочное пиво</h2>
+            <p class="assortmentCategoryDescrip">Мы подготовили для Вас лучшее бутылочное пиво, произвденнное в Российской Федерации. Исключительный вкус и широкий выбор крафтового пива.</p>
+          </div>
+        </div>
+      </div>
+      <div class="assortmentBeerSliderWrap">
+        <div class="assortmentBeerSlider">
+          <div class="assortmentSliderItems beer-swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider1.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider2.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider3.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider4.png">
+                <div class="assortmentCardTagNew assortmentCardTagNewSlider">Новинка</div>
+              </div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider5.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider6.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider7.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider8.png"></div>
+              <div class="swiper-slide beersliderItem"><img src="img/beerslider/beerslider9.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pageWrap pageWrapAssortment">
+        <div class="assortmentItem">
+          <div class="assortimentItemCategory">
+            <h2 class="assortmentCategoryHeader singleMarketCategoryHeader">Не пиво</h2>
+            <p class="assortmentCategoryDescrip">Мы подготовили для Вас лучшее бутылочное пиво, произвденнное в Российской Федерации. Исключительный вкус и широкий выбор крафтового пива.</p>
+          </div>
+          <div class="assortmentBeerItems">
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/brand-image.jpg');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/beerpicture.png');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="assortmentContainer">
+              <div class="assortmentCard">
+                <div class="assortmentCardItem assortmentCardFront">
+                  <div class="assortmentCardIcon">
+                        <svg class="icon-like">
+                          <use xlink:href="#icon-like"></use>
+                        </svg>
+                  </div>
+                  <div style="background-image: url('img/brand-image2.jpg');" class="assortmentCardImage"></div>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <h2>Dome Kriek     </h2>
+                </div>
+                <div class="assortmentCardItem assortmentCardBack">
+                  <h2>Жигулевское традиционное</h2>
+                  <p class="assortmentCardDescHeader">Трехсосненский завод</p>
+                  <div class="assortmentCardDescriptionItems">
+                    <div class="assortmentCardDescriptionItem">3.6% об.</div>
+                    <div class="assortmentCardDescriptionItem">IBU 5</div>
+                  </div>
+                  <p class="assortmentCardDescriptionTxt">Светлое освежающее пиво со вкусом осоложённого зерна и хмеля. Это чистый прозрачный лагер, употреблять его нужно практически ледяным.</p>
+                  <div class="assortmentCardInWrap">
+                    <p class="assortmentCardLinkText">Доступно в <span>15 точках</span></p>
+                    <div class="assortmentCardLinkCircle">
+                          <svg class="icon-arrow-right">
+                            <use xlink:href="#icon-arrow-right"></use>
+                          </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pageWrap pageWrapSingle marginTop10">
+        <h2 class="assortmentCategoryHeader">Сотрудники магазина</h2>
+        <div class="singleMarketWorkers">
+          <div class="singleMarketWorker">
+            <div style="background-image: url('../img/workers/1.jpg');" class="singleMarketWorkerImage"></div>
+            <div class="singleMarketWorkerInfo">
+              <h4 class="singleMarketWorkerName">Светлана Сысоева</h4>
+              <p class="singleMarketWorkerStatus">Управляющая магазином</p>
+            </div>
+          </div>
+          <div class="singleMarketWorker">
+            <div style="background-image: url('../img/workers/2.jpg');" class="singleMarketWorkerImage"></div>
+            <div class="singleMarketWorkerInfo">
+              <h4 class="singleMarketWorkerName">Дмитрий Павлов</h4>
+              <p class="singleMarketWorkerStatus">Продавец</p>
+            </div>
+          </div>
+          <div class="singleMarketWorker">
+            <div style="background-image: url('../img/workers/3.jpg');" class="singleMarketWorkerImage"></div>
+            <div class="singleMarketWorkerInfo">
+              <h4 class="singleMarketWorkerName">Алексей Рудман</h4>
+              <p class="singleMarketWorkerStatus">Продавец</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="singleMarketsMap">
+        <div class="pageWrap pageWrapSingle">
+          <h2 class="assortmentCategoryHeader">Как добраться?</h2>
+        </div>
+        <div class="singleMarketsContacts">
+          <div class="contactItems">
+            <h1 class="contactsHeaderMain">Контакты</h1>
+            <div class="contactItem contactItemAdress">
+              <p>198188, Россия,</br>  Санкт-Петербург,</br> ул. Наличная, 33</p>
+            </div>
+            <div class="contactItem">
+              <h2 class="contactsHeader">Телефон магазина</h2>
+              <p>+7 (931) 213-31-71</p>
+            </div>
+            <div class="contactItem">
+              <h2 class="contactsHeader">E-mail</h2>
+              <p><a href="#">nalichnaya33@glav-beer.ru</a></p>
+            </div>
+            <div class="contactFeedbackButton">Оставить отзыв</div>
+          </div>
+        </div>
+        <div id="map-singleMarkets"></div>
+      </div>
+    </section>
+    <script src="js/mapSingleMarket.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&amp;callback=initMap"></script>
+    <div class="newsMain"><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a></div>
+    <footer class="footer">
+      <div class="footerTop">
+        <div class="footerMenu">
+          <div class="footerMenuItem footerMenuItemActive"><a href="#">Главная</a></div>
+          <div class="footerMenuItem"><a href="#">О нас</a></div>
+          <div class="footerMenuItem"><a href="#">Сеть магазинов</a></div>
+          <div class="footerMenuItem"><a href="#">Ассортимент</a></div>
+          <div class="footerMenuItem"><a href="#">Контакты</a></div>
+        </div>
+        <div class="footerContact">
+          <div class="footerContactIcon">
+                <svg class="icon-phone">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+          </div>
+          <div class="footerContactText">+7 (812) 998-88-91 </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <div class="footerBottomLeft">
+          <div class="footerCopyright">
+            <p>© 2014–2016 ООО «ГлавПиво»</br> Все права защищены.</p>
+          </div>
+          <div class="footerWarning">
+            <div class="warningIcon"></div>
+            <p>Чрезмерное потребление алкогольной продукции вредит Вашему здоровью</p>
+          </div>
+          <div class="footerSocialIcons"><a href="#">
+                  <svg class="icon-fb">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg></a><a href="#">
+                  <svg class="icon-vk">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg></a><a href="#">
+                  <svg class="icon-inst">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg></a></div>
+        </div>
+        <div class="footerSocialDevelop">
+          <p>Создание - <a href="#">Danke</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/gamburger.js"></script>
+    <script src="./js/cookie.js"></script>
+  </body>
+</html>

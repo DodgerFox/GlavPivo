@@ -1,0 +1,136 @@
+a.mask
+    background rgba(0, 0, 0, .7)
+    width 100%
+    height 100%
+    position fixed
+    z-index 100
+    overflow hidden
+    top 0
+    left 0
+    box vertical middle center
+.mask
+    display none
+/*section,header,footer,.newsMain
+    filter: blur(3px) grayscale(20%)*/
+.popUpAgeWindow
+    position relative
+    z-index 111111111111
+    size 940px 484px
+    background-color white
+    border-radius 16px
+    box-shadow 0 0 40px black
+    box vertical center
+    padding-top 70px
+    +below(1040px)
+        width 90%
+        padding 0px 40px
+        padding-top 70px
+    +below(650px)
+        height 550px
+    +below(600px)
+        width 100%
+        height 100%
+        border-radius 0
+        padding-top 120px
+
+.popUpAgeLogo
+    .logo-age
+        size 197px 36px
+        margin-bottom 31px
+        +below(600px)
+            margin-bottom 0px
+
+.popUpAgeButtons
+    width 560px
+    margin-top 10px
+    box horizontal middle center
+    flex-wrap wrap
+    +below(740px)
+        width 482px
+    +below(650px)
+        width 230px
+
+.popUpAgeButton
+    background #e0cec5
+    size 270px 60px
+    box vertical center middle
+    border-radius 100px
+    box-shadow 1px 1px 0 #8f8f8f
+    font-family "Muller-Bold"
+    font-size 20px
+    cursor pointer
+    transition 0.1s all ease-in-out
+    &:hover
+        //box-shadow inset 1px 1px 0 #8f8f8f
+        box-shadow none
+    &:nth-child(2)
+        margin-left 20px
+        +below(650px)
+            margin-top 20px
+            margin-left 0
+    +below(740px)
+        size 230px 56px
+        font-size 18px
+
+.popUpAgeButtonYes
+    background #FFD427
+
+.popUpAgeHeader h2
+    margin 31px 0px
+    font-size 24px
+    font-family "Muller-Bold"
+    width 560px
+    text-align center
+    line-height 29px
+    letter-spacing -0.07px
+    +below(740px)
+        width 100%
+        font-size 22px
+        line-height 26px
+
+.popUpAgeWarning
+    box horizontal center middle
+    margin-top 50px
+    +below(600px)
+        margin-top 80px
+    .warningLabel
+        display none
+        +below(790px)
+            display flex
+    .warniingLabelDesctop
+        +below(980px)
+            height 30px
+            width 550px
+        +below(790px)
+            display none
+    svg
+        size 688px 33px
+        color #a7a7a7
+        font-family "PFDinTextCompPro"
+        font-size 33px
+        font-weight 300
+        letter-spacing -0.09px
+        line-height 33px
+        +below(980px)
+            font-size  26px
+        +below(800px)
+            width 70%
+        +below(700px)
+            font-size 22px
+            line-height 20px
+        +below(450px)
+            font-size 17px
+
+.popUpAgeBitMap
+    size 74px
+    background url(../img/bitmap.png)
+    margin-right 18px
+    +below(980px)
+        size 52px
+        background-size cover
+    +below(790px)
+        margin-right 0px
+    +below(540px)
+        size 37px
+    +below(430px)
+        margin-right 10px

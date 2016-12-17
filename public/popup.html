@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Главпиво</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=yes">
+    <link href="./css/woff.css" type="text/css" rel="stylesheet">
+    <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+    <link href="./css/blocks.css" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,600" rel="stylesheet"><!--[if IE 8]><link rel="stylesheet" href="./css/blocks.ie.css"><![endif]-->
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6/html5shiv.min.js"></script><![endif]-->
+    <script>
+      ;( function( window, document )
+          {
+              'use strict';
+      
+              var file     = './img/svghtml.html',
+                  revision = 1,
+                  debug = true;
+      
+              if( !document.createElementNS || !document.createElementNS( 'http://www.w3.org/2000/svg', 'svg' ).createSVGRect )
+                  return true;
+      
+              var isLocalStorage = 'localStorage' in window && window[ 'localStorage' ] !== null,
+                  request,
+                  data,
+                  insertIT = function()
+                  {
+                      document.body.insertAdjacentHTML( 'afterbegin', data );
+                  },
+                  insert = function()
+                  {
+                      if( document.body ) insertIT();
+                      else document.addEventListener( 'DOMContentLoaded', insertIT );
+                  };
+      
+              if( isLocalStorage && localStorage.getItem( 'inlineSVGrev' ) == revision & debug == false )
+              {
+                  data = localStorage.getItem( 'inlineSVGdata' );
+                  if( data )
+                  {
+                      insert();
+                      return true;
+                  }
+              }
+      
+              try
+              {
+                  request = new XMLHttpRequest();
+                  request.open( 'GET', file, true );
+                  request.onload = function()
+                  {
+                      if( request.status >= 200 && request.status < 400 )
+                      {
+                          data = request.responseText;
+                          insert();
+                          if( isLocalStorage )
+                          {
+                              localStorage.setItem( 'inlineSVGdata',  data );
+                              localStorage.setItem( 'inlineSVGrev',   revision );
+                          }
+                      }
+                  }
+                  request.send();
+              }
+              catch( e ){}
+      
+          }( window, document ) );
+      
+    </script>
+  </head>
+  <body>
+    <header class="header"><a href="tel:+7(812)998-88-91" class="headerPhoneIco">
+            <svg class="icon-telbutton">
+              <use xlink:href="#icon-telbutton"></use>
+            </svg></a><a href="/">
+            <svg class="logo">
+              <use xlink:href="#logo"></use>
+            </svg></a>
+      <div id="gamburger" class="headerMenu headerMenuContacts">
+            <svg class="icon-burger">
+              <use xlink:href="#icon-burger"></use>
+            </svg>
+        <div id="gamDropdown" class="headerMenuWrap"><a href="http://glavpivo.saydanke.ru/html/public/aboutUs.html" class="headerMenuItems">О нас</a><a href="http://glavpivo.saydanke.ru/html/public/netMarkets.html" class="headerMenuItems">Сеть магазинов</a><a href="http://glavpivo.saydanke.ru/html/public/assortment.html" class="headerMenuItems">Ассортимент</a><a href="http://glavpivo.saydanke.ru/html/public/contacts.html" class="headerMenuItems">Контакты</a>
+        </div>
+      </div>
+      <div class="headerMenuNear">
+        <div class="headerMenuNearWrap">
+          <p>Мы рядом</p>
+          <p class="headerMenuNearTextRight">6 км.</p>
+        </div>
+        <div class="headerMenuNearWrap">
+          <p class="headerMenuNearTextWhite">Коменданский пр. 25 к.1</p>
+          <div class="typeOfMarket">Магазин-пивная</div>
+          <p class="headerMenuNearTextRight">Открыто до 22:00</p>
+        </div>
+        <div class="headerMenuNearHowToFind">
+          <div class="headerMenuNearHowToFindIcon">
+                <svg class="searchlocation">
+                  <use xlink:href="#searchlocation"></use>
+                </svg>
+          </div>
+          <p class="headerMenuNearHowToFindText">Как найти?</p>
+        </div>
+      </div>
+    </header>
+    <div class="mask popUpAge">
+      <div class="popUpAgeWindow">
+        <div class="popUpAgeLogo">
+              <svg class="logo-age">
+                <use xlink:href="#logo-age"></use>
+              </svg>
+        </div>
+        <div class="popUpAgeHeader">
+          <h2>Сайт доступен только для лиц старше 18-ти лет. </br> Вам больше 18-ти лет?</h2>
+        </div>
+        <div class="popUpAgeButtons">
+          <div class="popUpAgeButton popUpAgeButtonYes">Да</div>
+          <div class="popUpAgeButton popUpAgeButtonNo">Нет</div>
+        </div>
+        <div class="popUpAgeWarning">
+          <div class="popUpAgeBitMap"></div>
+              <svg class="warningLabel">
+                <use xlink:href="#warningLabel"></use>
+              </svg>
+              <svg class="warniingLabelDesctop">
+                <use xlink:href="#warniingLabelDesctop"></use>
+              </svg>
+        </div>
+      </div>
+    </div>
+    <div class="mask popUpAge">
+      <div class="popUpAgeWindow">
+        <div class="popUpAgeLogo">
+              <svg class="logo-age">
+                <use xlink:href="#logo-age"></use>
+              </svg>
+        </div>
+        <div class="popUpAgeHeader">
+          <h2>Сайт доступен только для лиц старше 18-ти лет. </br> Вам больше 18-ти лет?</h2>
+        </div>
+        <div class="popUpAgeButtons">
+          <div class="popUpAgeButton popUpAgeButtonYes">Да</div>
+          <div class="popUpAgeButton popUpAgeButtonNo">Нет</div>
+        </div>
+        <div class="popUpAgeWarning">
+          <div class="popUpAgeBitMap"></div>
+              <svg class="warningLabel">
+                <use xlink:href="#warningLabel"></use>
+              </svg>
+              <svg class="warniingLabelDesctop">
+                <use xlink:href="#warniingLabelDesctop"></use>
+              </svg>
+        </div>
+      </div>
+    </div>
+    <section class="first">
+      <h1>Летние скидки <span><br> до 50%</span></h1>
+      <p>В сети магазинов разливного пива «ГлавПиво» стартует акция, благодаря которой пиво можно приобрести с 50% скидкой.</p>
+    </section>
+    <div class="logoslider">
+      <div class="logosliderItems swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider1.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider2.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider1.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider2.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider1.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider2.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider1.png"></div>
+          <div class="swiper-slide logosliderItem"><img src="img/logoslider2.png"></div>
+        </div>
+      </div>
+      <div class="logosliderNext">
+            <svg class="icon-arrow-right">
+              <use xlink:href="#icon-arrow-right"></use>
+            </svg>
+      </div>
+    </div>
+    <div class="newsMain"><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a><a href="#" class="newsMainItem">
+        <div style="background-image: url('../img/button-photo.jpg');" class="mainNewsItemImage"></div>
+        <div class="newsMainItemsRowItem">
+          <h3 class="newsMainItemHeader">45 пивных магазинов в Петербурге и области</h3>
+          <div class="newsMainItemIcon">
+                <svg class="icon-arrow-right">
+                  <use xlink:href="#icon-arrow-right"></use>
+                </svg>
+          </div>
+        </div></a></div>
+    <footer class="footer">
+      <div class="footerTop">
+        <div class="footerMenu">
+          <div class="footerMenuItem footerMenuItemActive"><a href="#">Главная</a></div>
+          <div class="footerMenuItem"><a href="#">О нас</a></div>
+          <div class="footerMenuItem"><a href="#">Сеть магазинов</a></div>
+          <div class="footerMenuItem"><a href="#">Ассортимент</a></div>
+          <div class="footerMenuItem"><a href="#">Контакты</a></div>
+        </div>
+        <div class="footerContact">
+          <div class="footerContactIcon">
+                <svg class="icon-phone">
+                  <use xlink:href="#icon-phone"></use>
+                </svg>
+          </div>
+          <div class="footerContactText">+7 (812) 998-88-91 </div>
+        </div>
+      </div>
+      <div class="footerBottom">
+        <div class="footerBottomLeft">
+          <div class="footerCopyright">
+            <p>© 2014–2016 ООО «ГлавПиво»</br> Все права защищены.</p>
+          </div>
+          <div class="footerWarning">
+            <div class="warningIcon"></div>
+            <p>Чрезмерное потребление алкогольной продукции вредит Вашему здоровью</p>
+          </div>
+          <div class="footerSocialIcons"><a href="#">
+                  <svg class="icon-fb">
+                    <use xlink:href="#icon-fb"></use>
+                  </svg></a><a href="#">
+                  <svg class="icon-vk">
+                    <use xlink:href="#icon-vk"></use>
+                  </svg></a><a href="#">
+                  <svg class="icon-inst">
+                    <use xlink:href="#icon-inst"></use>
+                  </svg></a></div>
+        </div>
+        <div class="footerSocialDevelop">
+          <p>Создание - <a href="#">Danke</a></p>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/gamburger.js"></script>
+    <script src="./js/cookie.js"></script>
+  </body>
+</html>

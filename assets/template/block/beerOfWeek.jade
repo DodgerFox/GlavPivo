@@ -1,0 +1,25 @@
+section.beerOfWeek
+    .beerOfWeekRow
+        .beerOfWeekWrapLeftContent
+            a(href="#").beerOfWeekButtonPreviosWeek
+                .beerOfWeekControl
+                    +svgIcon('icon-arrow-left')
+                h4 Предыдущая<br> неделя
+            .beerOfWeekFamousBrands Популярные бренды недели
+        .beerOfWeekCards
+            .beerOfWeekCard
+                .beerOfWeekCardIcon
+                    +svgIcon('icon-like')
+                .beerOfWeekCardImage(style="background-image: url('img/brand-image2.JPG');")
+                .beerOfWeekCardDescriptionItems
+                    .beerOfWeekCardDescriptionItem 3.6% об.
+                    .beerOfWeekCardDescriptionItem IBU 5
+                h2 Dome Kriek       
+            .beerOfWeekCard
+                .beerOfWeekCardIcon
+                    +svgIcon('icon-like')
+                .beerOfWeekCardImage(style="background-image: url('img/brand-image.JPG');")
+                .beerOfWeekCardDescriptionItems
+                    .beerOfWeekCardDescriptionItem 3.6% об.
+                    .beerOfWeekCardDescriptionItem IBU 5
+                h2 Жигулевское пиво

@@ -1,0 +1,179 @@
+extends _layout
+
+block content
+    section.netMarkets
+        .pageWrap
+            h1.mainHeaderForSimplePages Сеть магазинов
+            .netMarketsWrapCategoryBeer
+                h2.netMarketsCategoryBeerHeader Список магазинов
+                form
+                    .select-wrap-one.select-wrap-close
+                        +svgIcon('icon-arrow-down')
+                        .netMarketsSelectInput.activeInputNetMarket
+                            p Все типы
+                        .netMarketsSelectInput
+                            p Пивные
+                            +svgIcon('icon-beer-shop')
+                        .netMarketsSelectInput
+                            p Магазины
+                            +svgIcon('icon-beer-shop')
+                    .select-wrap-two.select-wrap-close
+                        +svgIcon('icon-arrow-down')
+                        .netMarketsSelectInput.activeInputNetMarket
+                            p Все типы1
+                            +svgIcon('icon-beer-shop')
+                        .netMarketsSelectInput
+                            p Все типы1
+                            +svgIcon('icon-beer-shop')
+
+                    select.gefes
+                        option По алфавиту
+                    select.gefes
+                        option Все типы
+                        option да нечего...
+                        option и что теперь?
+            .netMarketsMobileSliderWrap
+                h2.netMarketsMobileSliderHeader Ближайшие магазины
+                //-ЗДЕСЬ БУДЕТ СЛАЙДЕР
+            .netMarketsToggle
+                .netMarketsToggleSwich.swichLeft
+                p.netMarketsToggleList.netMarketsToggleActive Списком
+                p.netMarketsToggleMap.netMarketsToggleP На карте
+            h2.netMarketsCities Санкт-Петербург
+        .pageWrap.netMarketsItemsWrap
+            .netMarketsItems
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Стачек пр. 66
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Маршала Говорова 13
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+            h2.netMarketsCities Пригороды и Ленинградская область
+            .netMarketsItems
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+                .netMarketsItem
+                    +svgIcon('icon-beer-shop')
+                    h4 Наличная ул. 33
+                    p Пивная-рыба
+                    p.netMarketsMeters 600m
+                    p.netMarketsTime Открыто до 20:00
+                    a(href='http://glavpivo.saydanke.ru/html/public/product.html').netMarketsButtonMore Подробнее
+            h2.netMarketsMapBeerHeader.mobileVisibilityNone Магазины на карте
+    section.netMarketsMap
+            #map-netMarkets
+    script(src="js/mapMarkets.js")
+    script(src="js/selectDropdown.js")
+    script(src="js/netMarketsToggle.js")
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBbAbsa1bgdnp4Jz4AmSWZnVr22ftOMjG4&callback=initMap")
